@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--    <parent>-->
+    <!--        <groupId>org.springframework.boot</groupId>-->
+    <!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+    <!--        <version>2.2.2.RELEASE</version>-->
+    <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--    </parent>-->
+
+    <groupId>cr.co.agropag</groupId>
+    <artifactId>tribunet</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>10</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+            <version>1.0-rc2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-core</artifactId>
+            <version>3.2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-xjc-plugin</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>10</release>  <!--or <release>10</release>-->
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-xjc-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <!--                            <goal>xsdtojava</goal>-->
+                            <!--                            <goal>xsdtojava-tests</goal>-->
+                        </goals>
+                        <configuration>
+                            <sourceRoot>${basedir}/src/main/java</sourceRoot>
+                            <testSourceRoot>${basedir}/src/test/java</testSourceRoot>
+                            <xsdOptions>
+                                <!-- Version 2016/4.2                               -->
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v42y2016/FacturaElectronica_V.4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.factura</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2016/MensajeReceptor_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.mensaje.receptor</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2016/MensajeHacienda_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.mensaje.hacienda</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v42y2016/NotaCreditoElectronica_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.nota.credito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2016/NotaDebitoElectronica.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.nota.debito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2016/TiqueteElectronico_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2016.tiquete</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <!-- Version 2017/4.2                               -->
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v42y2017/FacturaElectronica_V.4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.factura</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2017/MensajeReceptor_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.mensaje.receptor</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2017/MensajeHacienda_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.mensaje.hacienda</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v42y2017/NotaCreditoElectronica_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.nota.credito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2017/NotaDebitoElectronica.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.nota.debito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v42y2017/TiqueteElectronico_V4.2.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v42y2017.tiquete</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <!-- Version 4.3                               -->
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/FacturaElectronica_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.factura</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v43/FacturaElectronicaCompra_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.factura.compra</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v43/FacturaElectronicaExportacion_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.factura.exportacion</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/MensajeHacienda_V4.3.xsd</xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.mensaje.hacienda</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/MensajeReceptor_V4.3.xsd</xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.mensaje.receptor</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v43/NotaCreditoElectronica_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.nota.credito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/NotaDebitoElectronica_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.nota.debito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/TiqueteElectronico_V4.3.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v43.tiquete</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                            </xsdOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
