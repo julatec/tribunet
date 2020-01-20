@@ -13,6 +13,7 @@ import javax.tools.JavaFileObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -125,7 +126,13 @@ public class AdapterProcessor extends AbstractProcessor {
                                         final String returnType = method.getReturnType().getName().replace('$', '.');
                                         final String type = adapters.getOrDefault(returnType, returnType);
                                         if (type.equals(returnType)) {
-                                            writer.printf("\t\tpublic final %s %s() { return target.%s(); }\n\n", type, getter, getter);
+                                            if (type.equals(javax.xml.bind.JAXBElement.class.getName())) {
+                                                final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
+                                                final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName();
+                                                writer.printf("\t\tpublic final %s %s() { return target.%s().getValue(); }\n\n", genericType, getter, getter);
+                                            } else {
+                                                writer.printf("\t\tpublic final %s %s() { return target.%s(); }\n\n", type, getter, getter);
+                                            }
                                         } else {
                                             writer.printf("\t\tprivate final %s %s;\n\n", type, getter);
                                             writer.printf("\t\tpublic final %s %s() { return %s; }\n\n", type, getter, getter);
