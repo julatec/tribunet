@@ -129,9 +129,9 @@ public class AdapterProcessor extends AbstractProcessor {
                                             if (type.equals(javax.xml.bind.JAXBElement.class.getName())) {
                                                 final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
                                                 final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName();
-                                                writer.printf("\t\tpublic final %s %s() { return target.%s().getValue(); }\n\n", genericType, getter, getter);
+                                                writer.printf("\t\tpublic final %s %s() { return target == null ? null : target.%s().getValue(); }\n\n", genericType, getter, getter);
                                             } else {
-                                                writer.printf("\t\tpublic final %s %s() { return target.%s(); }\n\n", type, getter, getter);
+                                                writer.printf("\t\tpublic final %s %s() { return target == null ? null : target.%s(); }\n\n", type, getter, getter);
                                             }
                                         } else {
                                             writer.printf("\t\tprivate final %s %s;\n\n", type, getter);
