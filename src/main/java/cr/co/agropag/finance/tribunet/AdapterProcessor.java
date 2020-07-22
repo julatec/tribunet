@@ -16,6 +16,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static javax.tools.Diagnostic.Kind.ERROR;
 import static javax.tools.Diagnostic.Kind.NOTE;
@@ -85,30 +86,33 @@ public class AdapterProcessor extends AbstractProcessor {
                     writer.println();
                     writer.printf("@%s(\"%s\")\n", Service.class.getName(), simpleName(factoryName));
                     writer.printf("public final class %s implements %s {\n", simpleName(factoryName), AdapterFactory.class.getName());
-                    for (String target : getQualifiedNames(adapt)) {
+                    for (Class<?> target : loadClass(adapt).collect(Collectors.toList())) {
                         writer.println();
                         writer.printf("\tstatic final class %s implements %s {\n\n", toSafeName(target), className);
-                        String targetClassName = target;
-                        if (adapt.inner()) {
-                            int index = targetClassName.lastIndexOf('.');
-                            targetClassName = targetClassName.substring(0, index) + "$" + targetClassName.substring(index + 1);
-                        }
-                        Class<?> targetClazz = Class.forName(targetClassName);
-                        writer.printf("\t\tprivate final %s target;\n\n", target);
-                        writer.printf("\t\t%s(%s target) {\n", toSafeName(target), target);
-                        writer.printf("\t\t\tthis.target = target;\n", toSafeName(target), target);
-                        //List<Element> elements = new ArrayList<>(clazz.getEnclosedElements());
-                        //clazz.getInterfaces().forEach(o -> elements.addAll(((TypeElement) o).getEnclosedElements()));
+                        writer.printf("\t\tprivate final %s target;\n\n", target.getCanonicalName());
+                        writer.printf("\t\t%s(%s target) {\n", toSafeName(target), target.getCanonicalName());
+                        writer.printf("\t\t\tthis.target = target;\n", toSafeName(target), target.getCanonicalName());
                         for (Element childElement : clazz.getEnclosedElements()) {
                             switch (childElement.getKind()) {
                                 case METHOD:
                                     try {
                                         final String getter = childElement.getSimpleName().toString();
-                                        final Method method = targetClazz.getDeclaredMethod(getter);
-                                        final String returnType = method.getReturnType().getName().replace('$', '.');
-                                        final String type = adapters.getOrDefault(returnType, returnType);
-                                        if (!type.equals(returnType)) {
-                                            writer.printf("\t\t\t%s = new %s.%s(target.%s());\n", getter, factoryName(type), toSafeName(returnType), getter);
+                                        final Method method = target.getDeclaredMethod(getter);
+                                        if (method.getReturnType().isAssignableFrom(List.class)) {
+                                            final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
+                                            final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName();
+                                            final String type = adapters.getOrDefault(genericType, genericType);
+                                            //if (type.equals(genericType)) {
+                                            //    writer.printf("\t\t\t%s = target.%s().stream();\n", getter, getter, factoryName(type), toSafeName(type));
+                                            //} else {
+                                            writer.printf("\t\t\t%s = target.%s().stream().map(%s.%s::new);\n", getter, getter, factoryName(type), toSafeName(genericType));
+                                            //}
+                                        } else {
+                                            final String returnType = method.getReturnType().getCanonicalName();
+                                            final String type = adapters.getOrDefault(returnType, returnType);
+                                            if (!type.equals(returnType)) {
+                                                writer.printf("\t\t\t%s = new %s.%s(target.%s());\n", getter, factoryName(type), toSafeName(returnType), getter);
+                                            }
                                         }
                                     } catch (NoSuchMethodException e) {
 
@@ -122,10 +126,16 @@ public class AdapterProcessor extends AbstractProcessor {
                                 case METHOD:
                                     try {
                                         final String getter = childElement.getSimpleName().toString();
-                                        final Method method = targetClazz.getMethod(getter);
-                                        final String returnType = method.getReturnType().getName().replace('$', '.');
+                                        final Method method = target.getMethod(getter);
+                                        final String returnType = method.getReturnType().getCanonicalName();
                                         final String type = adapters.getOrDefault(returnType, returnType);
-                                        if (type.equals(returnType)) {
+                                        if (method.getReturnType().isAssignableFrom(List.class)) {
+                                            final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
+                                            final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName().replace('$', '.');
+                                            final String type2 = adapters.getOrDefault(genericType, genericType);
+                                            writer.printf("\t\tprivate final java.util.stream.Stream<%s> %s;\n\n", type2, getter);
+                                            writer.printf("\t\tpublic final java.util.stream.Stream<%s> %s() { return %s; }\n\n", type2, getter, getter);
+                                        } else if (type.equals(returnType)) {
                                             if (type.equals(javax.xml.bind.JAXBElement.class.getName())) {
                                                 final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
                                                 final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName();
@@ -159,9 +169,6 @@ public class AdapterProcessor extends AbstractProcessor {
                     writer.println("\t\treturn null;");
                     writer.println("\t};");
                     writer.println("}");
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                    messager.printMessage(ERROR, e.getMessage());
                 }
             }
         } catch (IOException e) {
@@ -192,6 +199,36 @@ public class AdapterProcessor extends AbstractProcessor {
         }
     }
 
+    private Stream<Class<?>> loadClass(String clazz) {
+        String[] parts = clazz.split("\\.");
+        StringBuilder sb = new StringBuilder(parts[0]);
+        int i;
+        for (i = 1; i < parts.length; i++) {
+            try {
+                Class.forName(sb.toString());
+                messager.printMessage(NOTE, "Found " + sb);
+                break;
+            } catch (ClassNotFoundException e) {
+                sb.append(".").append(parts[i]);
+            }
+        }
+        for (; i < parts.length; i++) {
+            sb.append("$").append(parts[i]);
+        }
+        try {
+            return Stream.of(Class.forName(sb.toString()));
+        } catch (ClassNotFoundException e) {
+            messager.printMessage(ERROR, e.getMessage());
+            return Stream.empty();
+        }
+    }
+
+    private Stream<Class<?>> loadClass(Adapt adapt) {
+        return getQualifiedNames(adapt)
+                .stream()
+                .flatMap(this::loadClass);
+    }
+
     private String getQualifiedName(TypeElement clazz) {
         try {
             return clazz.getQualifiedName().toString();
@@ -207,11 +244,16 @@ public class AdapterProcessor extends AbstractProcessor {
 
     protected String factoryName(String name) {
         String[] parts = name.split("\\.");
-        return parts[parts.length - 1] + suffix;
+        String[] parts2 = parts[parts.length - 1].split("\\$");
+        return parts2[parts2.length - 1] + suffix;
     }
 
     protected String toSafeName(String name) {
-        return name.replace('.', '_');
+        return name.replace('.', '_').replace('$', '_');
+    }
+
+    protected String toSafeName(Class<?> clazz) {
+        return clazz.getCanonicalName().replace('.', '_');
     }
 
 }
