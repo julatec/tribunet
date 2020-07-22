@@ -9,6 +9,4 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 public @interface Adapt {
     Class<?>[] value();
-
-    boolean inner() default false;
 }
