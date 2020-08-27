@@ -2,23 +2,28 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.01.18 a las 10:51:11 PM CST 
+// Generado el: 2020.08.26 a las 08:57:58 PM CST 
 //
 
 
 package cr.go.hacienda.tribunet.v42y2017.mensaje.receptor;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Clase Java para anonymous complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -91,19 +96,21 @@ import java.math.BigInteger;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-        "clave",
-        "numeroCedulaEmisor",
-        "fechaEmisionDoc",
-        "mensaje",
-        "detalleMensaje",
-        "montoTotalImpuesto",
-        "totalFactura",
-        "numeroCedulaReceptor",
-        "numeroConsecutivoReceptor",
-        "signature"
+    "clave",
+    "numeroCedulaEmisor",
+    "fechaEmisionDoc",
+    "mensaje",
+    "detalleMensaje",
+    "montoTotalImpuesto",
+    "totalFactura",
+    "numeroCedulaReceptor",
+    "numeroConsecutivoReceptor",
+    "signature"
 })
 @XmlRootElement(name = "MensajeReceptor", namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/mensajeReceptor")
 public class MensajeReceptor {
@@ -132,9 +139,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad clave.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getClave() {
         return clave;
@@ -142,9 +151,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad clave.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setClave(String value) {
         this.clave = value;
@@ -152,9 +163,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad numeroCedulaEmisor.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroCedulaEmisor() {
         return numeroCedulaEmisor;
@@ -162,9 +175,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad numeroCedulaEmisor.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroCedulaEmisor(String value) {
         this.numeroCedulaEmisor = value;
@@ -172,9 +187,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad fechaEmisionDoc.
-     *
-     * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getFechaEmisionDoc() {
         return fechaEmisionDoc;
@@ -182,9 +199,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad fechaEmisionDoc.
-     *
-     * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setFechaEmisionDoc(XMLGregorianCalendar value) {
         this.fechaEmisionDoc = value;
@@ -192,9 +211,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad mensaje.
-     *
-     * @return possible object is
-     * {@link BigInteger }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getMensaje() {
         return mensaje;
@@ -202,9 +223,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad mensaje.
-     *
-     * @param value allowed object is
-     *              {@link BigInteger }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setMensaje(BigInteger value) {
         this.mensaje = value;
@@ -212,9 +235,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad detalleMensaje.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDetalleMensaje() {
         return detalleMensaje;
@@ -222,9 +247,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad detalleMensaje.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDetalleMensaje(String value) {
         this.detalleMensaje = value;
@@ -232,9 +259,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad montoTotalImpuesto.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getMontoTotalImpuesto() {
         return montoTotalImpuesto;
@@ -242,9 +271,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad montoTotalImpuesto.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setMontoTotalImpuesto(BigDecimal value) {
         this.montoTotalImpuesto = value;
@@ -252,9 +283,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad totalFactura.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getTotalFactura() {
         return totalFactura;
@@ -262,9 +295,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad totalFactura.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setTotalFactura(BigDecimal value) {
         this.totalFactura = value;
@@ -272,9 +307,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad numeroCedulaReceptor.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroCedulaReceptor() {
         return numeroCedulaReceptor;
@@ -282,9 +319,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad numeroCedulaReceptor.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroCedulaReceptor(String value) {
         this.numeroCedulaReceptor = value;
@@ -292,9 +331,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad numeroConsecutivoReceptor.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroConsecutivoReceptor() {
         return numeroConsecutivoReceptor;
@@ -302,9 +343,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad numeroConsecutivoReceptor.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroConsecutivoReceptor(String value) {
         this.numeroConsecutivoReceptor = value;
@@ -312,9 +355,11 @@ public class MensajeReceptor {
 
     /**
      * Obtiene el valor de la propiedad signature.
-     *
-     * @return possible object is
-     * {@link SignatureType }
+     * 
+     * @return
+     *     possible object is
+     *     {@link SignatureType }
+     *     
      */
     public SignatureType getSignature() {
         return signature;
@@ -322,9 +367,11 @@ public class MensajeReceptor {
 
     /**
      * Define el valor de la propiedad signature.
-     *
-     * @param value allowed object is
-     *              {@link SignatureType }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SignatureType }
+     *     
      */
     public void setSignature(SignatureType value) {
         this.signature = value;

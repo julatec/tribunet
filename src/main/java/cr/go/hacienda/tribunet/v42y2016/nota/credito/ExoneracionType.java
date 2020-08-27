@@ -2,23 +2,27 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.01.18 a las 10:48:53 PM CST 
+// Generado el: 2020.08.26 a las 08:55:14 PM CST 
 //
 
 
 package cr.go.hacienda.tribunet.v42y2016.nota.credito;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Clase Java para ExoneracionType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="ExoneracionType"&gt;
  *   &lt;complexContent&gt;
@@ -64,15 +68,17 @@ import java.math.BigInteger;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExoneracionType", namespace = "https://www.hacienda.go.cr/ATV/docs/esquemas/2016/v4.2/notaCreditoElectronica", propOrder = {
-        "tipoDocumento",
-        "numeroDocumento",
-        "nombreInstitucion",
-        "fechaEmision",
-        "montoImpuesto",
-        "porcentajeCompra"
+    "tipoDocumento",
+    "numeroDocumento",
+    "nombreInstitucion",
+    "fechaEmision",
+    "montoImpuesto",
+    "porcentajeCompra"
 })
 public class ExoneracionType {
 
@@ -92,9 +98,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad tipoDocumento.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTipoDocumento() {
         return tipoDocumento;
@@ -102,9 +110,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad tipoDocumento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTipoDocumento(String value) {
         this.tipoDocumento = value;
@@ -112,9 +122,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad numeroDocumento.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroDocumento() {
         return numeroDocumento;
@@ -122,9 +134,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad numeroDocumento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroDocumento(String value) {
         this.numeroDocumento = value;
@@ -132,9 +146,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad nombreInstitucion.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNombreInstitucion() {
         return nombreInstitucion;
@@ -142,9 +158,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad nombreInstitucion.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNombreInstitucion(String value) {
         this.nombreInstitucion = value;
@@ -152,9 +170,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad fechaEmision.
-     *
-     * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getFechaEmision() {
         return fechaEmision;
@@ -162,9 +182,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad fechaEmision.
-     *
-     * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public void setFechaEmision(XMLGregorianCalendar value) {
         this.fechaEmision = value;
@@ -172,9 +194,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad montoImpuesto.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getMontoImpuesto() {
         return montoImpuesto;
@@ -182,9 +206,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad montoImpuesto.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setMontoImpuesto(BigDecimal value) {
         this.montoImpuesto = value;
@@ -192,9 +218,11 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad porcentajeCompra.
-     *
-     * @return possible object is
-     * {@link BigInteger }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
      */
     public BigInteger getPorcentajeCompra() {
         return porcentajeCompra;
@@ -202,9 +230,11 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad porcentajeCompra.
-     *
-     * @param value allowed object is
-     *              {@link BigInteger }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
      */
     public void setPorcentajeCompra(BigInteger value) {
         this.porcentajeCompra = value;
