@@ -21,6 +21,10 @@ import java.util.stream.Stream;
 import static javax.tools.Diagnostic.Kind.ERROR;
 import static javax.tools.Diagnostic.Kind.NOTE;
 
+/**
+ * Processes the {@link Adapt} annotation. It generates {@link org.springframework.stereotype.Service} classes for each
+ * Interface that adapts with the "Factory" suffix.
+ */
 @AutoService(Processor.class)
 public class AdapterProcessor extends AbstractProcessor {
 
