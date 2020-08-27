@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.08.26 a las 09:06:10 PM CST 
+// Generado el: 2020.08.27 a las 09:16:26 AM CST 
 //
 
 
@@ -21,9 +21,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Clase Java para SignatureValueType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="SignatureValueType"&gt;
  *   &lt;simpleContent&gt;
@@ -33,10 +33,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/simpleContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SignatureValueType", propOrder = {
-        "value"
+    "value"
 })
 public class SignatureValueType {
 
@@ -50,9 +52,10 @@ public class SignatureValueType {
 
     /**
      * Obtiene el valor de la propiedad value.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getValue() {
         return value;
@@ -60,9 +63,10 @@ public class SignatureValueType {
 
     /**
      * Define el valor de la propiedad value.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setValue(byte[] value) {
         this.value = value;
@@ -70,9 +74,11 @@ public class SignatureValueType {
 
     /**
      * Obtiene el valor de la propiedad id.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
@@ -80,9 +86,11 @@ public class SignatureValueType {
 
     /**
      * Define el valor de la propiedad id.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;

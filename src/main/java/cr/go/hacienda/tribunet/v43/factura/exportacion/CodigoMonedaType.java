@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.08.26 a las 09:02:45 PM CST 
+// Generado el: 2020.08.27 a las 09:12:54 AM CST 
 //
 
 
@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para CodigoMonedaType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="CodigoMonedaType"&gt;
  *   &lt;complexContent&gt;
@@ -215,11 +215,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CodigoMonedaType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronicaExportacion", propOrder = {
-        "codigoMoneda",
-        "tipoCambio"
+    "codigoMoneda",
+    "tipoCambio"
 })
 public class CodigoMonedaType {
 
@@ -230,9 +232,11 @@ public class CodigoMonedaType {
 
     /**
      * Obtiene el valor de la propiedad codigoMoneda.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigoMoneda() {
         return codigoMoneda;
@@ -240,9 +244,11 @@ public class CodigoMonedaType {
 
     /**
      * Define el valor de la propiedad codigoMoneda.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigoMoneda(String value) {
         this.codigoMoneda = value;
@@ -250,9 +256,11 @@ public class CodigoMonedaType {
 
     /**
      * Obtiene el valor de la propiedad tipoCambio.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getTipoCambio() {
         return tipoCambio;
@@ -260,9 +268,11 @@ public class CodigoMonedaType {
 
     /**
      * Define el valor de la propiedad tipoCambio.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setTipoCambio(BigDecimal value) {
         this.tipoCambio = value;

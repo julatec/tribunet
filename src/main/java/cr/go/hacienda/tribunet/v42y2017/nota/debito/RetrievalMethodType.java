@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.08.26 a las 09:00:01 PM CST 
+// Generado el: 2020.08.27 a las 09:10:11 AM CST 
 //
 
 
@@ -18,9 +18,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para RetrievalMethodType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="RetrievalMethodType"&gt;
  *   &lt;complexContent&gt;
@@ -34,10 +34,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RetrievalMethodType", propOrder = {
-        "transforms"
+    "transforms"
 })
 public class RetrievalMethodType {
 
@@ -52,9 +54,11 @@ public class RetrievalMethodType {
 
     /**
      * Obtiene el valor de la propiedad transforms.
-     *
-     * @return possible object is
-     * {@link TransformsType }
+     * 
+     * @return
+     *     possible object is
+     *     {@link TransformsType }
+     *     
      */
     public TransformsType getTransforms() {
         return transforms;
@@ -62,9 +66,11 @@ public class RetrievalMethodType {
 
     /**
      * Define el valor de la propiedad transforms.
-     *
-     * @param value allowed object is
-     *              {@link TransformsType }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TransformsType }
+     *     
      */
     public void setTransforms(TransformsType value) {
         this.transforms = value;
@@ -72,9 +78,11 @@ public class RetrievalMethodType {
 
     /**
      * Obtiene el valor de la propiedad uri.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getURI() {
         return uri;
@@ -82,9 +90,11 @@ public class RetrievalMethodType {
 
     /**
      * Define el valor de la propiedad uri.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setURI(String value) {
         this.uri = value;
@@ -92,9 +102,11 @@ public class RetrievalMethodType {
 
     /**
      * Obtiene el valor de la propiedad type.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getType() {
         return type;
@@ -102,9 +114,11 @@ public class RetrievalMethodType {
 
     /**
      * Define el valor de la propiedad type.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setType(String value) {
         this.type = value;

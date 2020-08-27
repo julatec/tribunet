@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.08.26 a las 08:58:39 PM CST 
+// Generado el: 2020.08.27 a las 09:08:49 AM CST 
 //
 
 
@@ -23,9 +23,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Clase Java para SignedInfoType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="SignedInfoType"&gt;
  *   &lt;complexContent&gt;
@@ -40,12 +40,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SignedInfoType", propOrder = {
-        "canonicalizationMethod",
-        "signatureMethod",
-        "reference"
+    "canonicalizationMethod",
+    "signatureMethod",
+    "reference"
 })
 public class SignedInfoType {
 
@@ -63,9 +65,11 @@ public class SignedInfoType {
 
     /**
      * Obtiene el valor de la propiedad canonicalizationMethod.
-     *
-     * @return possible object is
-     * {@link CanonicalizationMethodType }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CanonicalizationMethodType }
+     *     
      */
     public CanonicalizationMethodType getCanonicalizationMethod() {
         return canonicalizationMethod;
@@ -73,9 +77,11 @@ public class SignedInfoType {
 
     /**
      * Define el valor de la propiedad canonicalizationMethod.
-     *
-     * @param value allowed object is
-     *              {@link CanonicalizationMethodType }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CanonicalizationMethodType }
+     *     
      */
     public void setCanonicalizationMethod(CanonicalizationMethodType value) {
         this.canonicalizationMethod = value;
@@ -83,9 +89,11 @@ public class SignedInfoType {
 
     /**
      * Obtiene el valor de la propiedad signatureMethod.
-     *
-     * @return possible object is
-     * {@link SignatureMethodType }
+     * 
+     * @return
+     *     possible object is
+     *     {@link SignatureMethodType }
+     *     
      */
     public SignatureMethodType getSignatureMethod() {
         return signatureMethod;
@@ -93,9 +101,11 @@ public class SignedInfoType {
 
     /**
      * Define el valor de la propiedad signatureMethod.
-     *
-     * @param value allowed object is
-     *              {@link SignatureMethodType }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SignatureMethodType }
+     *     
      */
     public void setSignatureMethod(SignatureMethodType value) {
         this.signatureMethod = value;
@@ -103,23 +113,25 @@ public class SignedInfoType {
 
     /**
      * Gets the value of the reference property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the reference property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getReference().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ReferenceType }
+     * 
+     * 
      */
     public List<ReferenceType> getReference() {
         if (reference == null) {
@@ -130,9 +142,11 @@ public class SignedInfoType {
 
     /**
      * Obtiene el valor de la propiedad id.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getId() {
         return id;
@@ -140,9 +154,11 @@ public class SignedInfoType {
 
     /**
      * Define el valor de la propiedad id.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setId(String value) {
         this.id = value;
