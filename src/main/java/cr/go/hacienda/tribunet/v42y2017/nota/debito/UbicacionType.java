@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.01.18 a las 10:52:50 PM CST 
+// Generado el: 2020.08.26 a las 09:00:01 PM CST 
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para UbicacionType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="UbicacionType"&gt;
  *   &lt;complexContent&gt;
@@ -68,14 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UbicacionType", namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/notaDebitoElectronica", propOrder = {
-        "provincia",
-        "canton",
-        "distrito",
-        "barrio",
-        "otrasSenas"
+    "provincia",
+    "canton",
+    "distrito",
+    "barrio",
+    "otrasSenas"
 })
 public class UbicacionType {
 
@@ -92,9 +94,11 @@ public class UbicacionType {
 
     /**
      * Obtiene el valor de la propiedad provincia.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getProvincia() {
         return provincia;
@@ -102,9 +106,11 @@ public class UbicacionType {
 
     /**
      * Define el valor de la propiedad provincia.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setProvincia(String value) {
         this.provincia = value;
@@ -112,9 +118,11 @@ public class UbicacionType {
 
     /**
      * Obtiene el valor de la propiedad canton.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCanton() {
         return canton;
@@ -122,9 +130,11 @@ public class UbicacionType {
 
     /**
      * Define el valor de la propiedad canton.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCanton(String value) {
         this.canton = value;
@@ -132,9 +142,11 @@ public class UbicacionType {
 
     /**
      * Obtiene el valor de la propiedad distrito.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDistrito() {
         return distrito;
@@ -142,9 +154,11 @@ public class UbicacionType {
 
     /**
      * Define el valor de la propiedad distrito.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDistrito(String value) {
         this.distrito = value;
@@ -152,9 +166,11 @@ public class UbicacionType {
 
     /**
      * Obtiene el valor de la propiedad barrio.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBarrio() {
         return barrio;
@@ -162,9 +178,11 @@ public class UbicacionType {
 
     /**
      * Define el valor de la propiedad barrio.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBarrio(String value) {
         this.barrio = value;
@@ -172,9 +190,11 @@ public class UbicacionType {
 
     /**
      * Obtiene el valor de la propiedad otrasSenas.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getOtrasSenas() {
         return otrasSenas;
@@ -182,9 +202,11 @@ public class UbicacionType {
 
     /**
      * Define el valor de la propiedad otrasSenas.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setOtrasSenas(String value) {
         this.otrasSenas = value;

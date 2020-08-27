@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.01.18 a las 10:56:12 PM CST 
+// Generado el: 2020.08.26 a las 09:04:07 PM CST 
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para DSAKeyValueType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="DSAKeyValueType"&gt;
  *   &lt;complexContent&gt;
@@ -40,16 +40,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DSAKeyValueType", propOrder = {
-        "p",
-        "q",
-        "g",
-        "y",
-        "j",
-        "seed",
-        "pgenCounter"
+    "p",
+    "q",
+    "g",
+    "y",
+    "j",
+    "seed",
+    "pgenCounter"
 })
 public class DSAKeyValueType {
 
@@ -70,9 +72,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad p.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getP() {
         return p;
@@ -80,9 +83,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad p.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setP(byte[] value) {
         this.p = value;
@@ -90,9 +94,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad q.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getQ() {
         return q;
@@ -100,9 +105,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad q.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setQ(byte[] value) {
         this.q = value;
@@ -110,9 +116,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad g.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getG() {
         return g;
@@ -120,9 +127,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad g.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setG(byte[] value) {
         this.g = value;
@@ -130,9 +138,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad y.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getY() {
         return y;
@@ -140,9 +149,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad y.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setY(byte[] value) {
         this.y = value;
@@ -150,9 +160,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad j.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getJ() {
         return j;
@@ -160,9 +171,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad j.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setJ(byte[] value) {
         this.j = value;
@@ -170,9 +182,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad seed.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getSeed() {
         return seed;
@@ -180,9 +193,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad seed.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setSeed(byte[] value) {
         this.seed = value;
@@ -190,9 +204,10 @@ public class DSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad pgenCounter.
-     *
-     * @return possible object is
-     * byte[]
+     * 
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getPgenCounter() {
         return pgenCounter;
@@ -200,9 +215,10 @@ public class DSAKeyValueType {
 
     /**
      * Define el valor de la propiedad pgenCounter.
-     *
-     * @param value allowed object is
-     *              byte[]
+     * 
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
     public void setPgenCounter(byte[] value) {
         this.pgenCounter = value;

@@ -1,4 +1,4 @@
-package cr.co.agropag.finance.tribunet;
+package name.julatec.ekonomi.tribunet.annotation;
 
 import com.google.auto.service.AutoService;
 import org.springframework.stereotype.Service;
@@ -181,14 +181,6 @@ public class AdapterProcessor extends AbstractProcessor {
             return false;
         }
         return result;
-    }
-
-    private String getQualifiedName(Class<?> clazz) {
-        try {
-            return clazz.getName();
-        } catch (MirroredTypeException e) {
-            return e.getTypeMirror().toString();
-        }
     }
 
     private List<String> getQualifiedNames(Adapt adapt) {

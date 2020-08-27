@@ -2,24 +2,24 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.01.18 a las 10:56:47 PM CST 
+// Generado el: 2020.08.26 a las 09:04:48 PM CST 
 //
 
 
 package cr.go.hacienda.tribunet.v43.nota.credito;
 
+import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.math.BigDecimal;
 
 
 /**
  * <p>Clase Java para DescuentoType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="DescuentoType"&gt;
  *   &lt;complexContent&gt;
@@ -38,11 +38,13 @@ import java.math.BigDecimal;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DescuentoType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/notaCreditoElectronica", propOrder = {
-        "montoDescuento",
-        "naturalezaDescuento"
+    "montoDescuento",
+    "naturalezaDescuento"
 })
 public class DescuentoType {
 
@@ -53,9 +55,11 @@ public class DescuentoType {
 
     /**
      * Obtiene el valor de la propiedad montoDescuento.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getMontoDescuento() {
         return montoDescuento;
@@ -63,9 +67,11 @@ public class DescuentoType {
 
     /**
      * Define el valor de la propiedad montoDescuento.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setMontoDescuento(BigDecimal value) {
         this.montoDescuento = value;
@@ -73,9 +79,11 @@ public class DescuentoType {
 
     /**
      * Obtiene el valor de la propiedad naturalezaDescuento.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNaturalezaDescuento() {
         return naturalezaDescuento;
@@ -83,9 +91,11 @@ public class DescuentoType {
 
     /**
      * Define el valor de la propiedad naturalezaDescuento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNaturalezaDescuento(String value) {
         this.naturalezaDescuento = value;
