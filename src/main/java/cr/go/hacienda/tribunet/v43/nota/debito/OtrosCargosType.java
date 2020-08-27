@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2020.08.26 a las 09:05:29 PM CST 
+// Generado el: 2020.08.27 a las 09:15:45 AM CST 
 //
 
 
@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para OtrosCargosType complex type.
- *
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- *
+ * 
  * <pre>
  * &lt;complexType name="OtrosCargosType"&gt;
  *   &lt;complexContent&gt;
@@ -75,15 +75,17 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OtrosCargosType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/notaDebitoElectronica", propOrder = {
-        "tipoDocumento",
-        "numeroIdentidadTercero",
-        "nombreTercero",
-        "detalle",
-        "porcentaje",
-        "montoCargo"
+    "tipoDocumento",
+    "numeroIdentidadTercero",
+    "nombreTercero",
+    "detalle",
+    "porcentaje",
+    "montoCargo"
 })
 public class OtrosCargosType {
 
@@ -102,9 +104,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad tipoDocumento.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTipoDocumento() {
         return tipoDocumento;
@@ -112,9 +116,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad tipoDocumento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTipoDocumento(String value) {
         this.tipoDocumento = value;
@@ -122,9 +128,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad numeroIdentidadTercero.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroIdentidadTercero() {
         return numeroIdentidadTercero;
@@ -132,9 +140,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad numeroIdentidadTercero.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroIdentidadTercero(String value) {
         this.numeroIdentidadTercero = value;
@@ -142,9 +152,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad nombreTercero.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNombreTercero() {
         return nombreTercero;
@@ -152,9 +164,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad nombreTercero.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNombreTercero(String value) {
         this.nombreTercero = value;
@@ -162,9 +176,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad detalle.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDetalle() {
         return detalle;
@@ -172,9 +188,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad detalle.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDetalle(String value) {
         this.detalle = value;
@@ -182,9 +200,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad porcentaje.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getPorcentaje() {
         return porcentaje;
@@ -192,9 +212,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad porcentaje.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setPorcentaje(BigDecimal value) {
         this.porcentaje = value;
@@ -202,9 +224,11 @@ public class OtrosCargosType {
 
     /**
      * Obtiene el valor de la propiedad montoCargo.
-     *
-     * @return possible object is
-     * {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getMontoCargo() {
         return montoCargo;
@@ -212,9 +236,11 @@ public class OtrosCargosType {
 
     /**
      * Define el valor de la propiedad montoCargo.
-     *
-     * @param value allowed object is
-     *              {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
     public void setMontoCargo(BigDecimal value) {
         this.montoCargo = value;
