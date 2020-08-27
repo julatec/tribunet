@@ -21,9 +21,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Clase Java para ReferenceType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="ReferenceType"&gt;
  *   &lt;complexContent&gt;
@@ -40,14 +40,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReferenceType", propOrder = {
-    "transforms",
-    "digestMethod",
-    "digestValue"
+        "transforms",
+        "digestMethod",
+        "digestValue"
 })
 public class ReferenceType {
 
@@ -71,11 +69,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad transforms.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TransformsType }
-     *     
+     *
+     * @return possible object is
+     * {@link TransformsType }
      */
     public TransformsType getTransforms() {
         return transforms;
@@ -83,11 +79,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad transforms.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TransformsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TransformsType }
      */
     public void setTransforms(TransformsType value) {
         this.transforms = value;
@@ -95,11 +89,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad digestMethod.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DigestMethodType }
-     *     
+     *
+     * @return possible object is
+     * {@link DigestMethodType }
      */
     public DigestMethodType getDigestMethod() {
         return digestMethod;
@@ -107,11 +99,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad digestMethod.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DigestMethodType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DigestMethodType }
      */
     public void setDigestMethod(DigestMethodType value) {
         this.digestMethod = value;
@@ -119,10 +109,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad digestValue.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
+     *
+     * @return possible object is
+     * byte[]
      */
     public byte[] getDigestValue() {
         return digestValue;
@@ -130,10 +119,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad digestValue.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
+     *
+     * @param value allowed object is
+     *              byte[]
      */
     public void setDigestValue(byte[] value) {
         this.digestValue = value;
@@ -141,11 +129,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -153,11 +139,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -165,11 +149,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad uri.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURI() {
         return uri;
@@ -177,11 +159,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad uri.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURI(String value) {
         this.uri = value;
@@ -189,11 +169,9 @@ public class ReferenceType {
 
     /**
      * Obtiene el valor de la propiedad type.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getType() {
         return type;
@@ -201,11 +179,9 @@ public class ReferenceType {
 
     /**
      * Define el valor de la propiedad type.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setType(String value) {
         this.type = value;

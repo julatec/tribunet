@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para ImpuestoType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="ImpuestoType"&gt;
  *   &lt;complexContent&gt;
@@ -60,15 +60,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ImpuestoType", namespace = "https://www.hacienda.go.cr/ATV/docs/esquemas/2016/v4.2/notaDebitoElectronica", propOrder = {
-    "codigo",
-    "tarifa",
-    "monto",
-    "exoneracion"
+        "codigo",
+        "tarifa",
+        "monto",
+        "exoneracion"
 })
 public class ImpuestoType {
 
@@ -83,11 +81,9 @@ public class ImpuestoType {
 
     /**
      * Obtiene el valor de la propiedad codigo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodigo() {
         return codigo;
@@ -95,11 +91,9 @@ public class ImpuestoType {
 
     /**
      * Define el valor de la propiedad codigo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodigo(String value) {
         this.codigo = value;
@@ -107,11 +101,9 @@ public class ImpuestoType {
 
     /**
      * Obtiene el valor de la propiedad tarifa.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getTarifa() {
         return tarifa;
@@ -119,11 +111,9 @@ public class ImpuestoType {
 
     /**
      * Define el valor de la propiedad tarifa.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setTarifa(BigDecimal value) {
         this.tarifa = value;
@@ -131,11 +121,9 @@ public class ImpuestoType {
 
     /**
      * Obtiene el valor de la propiedad monto.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMonto() {
         return monto;
@@ -143,11 +131,9 @@ public class ImpuestoType {
 
     /**
      * Define el valor de la propiedad monto.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMonto(BigDecimal value) {
         this.monto = value;
@@ -155,11 +141,9 @@ public class ImpuestoType {
 
     /**
      * Obtiene el valor de la propiedad exoneracion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExoneracionType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExoneracionType }
      */
     public ExoneracionType getExoneracion() {
         return exoneracion;
@@ -167,11 +151,9 @@ public class ImpuestoType {
 
     /**
      * Define el valor de la propiedad exoneracion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExoneracionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExoneracionType }
      */
     public void setExoneracion(ExoneracionType value) {
         this.exoneracion = value;

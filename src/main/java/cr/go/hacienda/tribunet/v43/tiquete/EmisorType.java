@@ -18,9 +18,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para EmisorType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="EmisorType"&gt;
  *   &lt;complexContent&gt;
@@ -56,18 +56,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmisorType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico", propOrder = {
-    "nombre",
-    "identificacion",
-    "nombreComercial",
-    "ubicacion",
-    "telefono",
-    "fax",
-    "correoElectronico"
+        "nombre",
+        "identificacion",
+        "nombreComercial",
+        "ubicacion",
+        "telefono",
+        "fax",
+        "correoElectronico"
 })
 public class EmisorType {
 
@@ -88,11 +86,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad nombre.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombre() {
         return nombre;
@@ -100,11 +96,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad nombre.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombre(String value) {
         this.nombre = value;
@@ -112,11 +106,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad identificacion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link IdentificacionType }
-     *     
+     *
+     * @return possible object is
+     * {@link IdentificacionType }
      */
     public IdentificacionType getIdentificacion() {
         return identificacion;
@@ -124,11 +116,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad identificacion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link IdentificacionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link IdentificacionType }
      */
     public void setIdentificacion(IdentificacionType value) {
         this.identificacion = value;
@@ -136,11 +126,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad nombreComercial.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombreComercial() {
         return nombreComercial;
@@ -148,11 +136,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad nombreComercial.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombreComercial(String value) {
         this.nombreComercial = value;
@@ -160,11 +146,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad ubicacion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UbicacionType }
-     *     
+     *
+     * @return possible object is
+     * {@link UbicacionType }
      */
     public UbicacionType getUbicacion() {
         return ubicacion;
@@ -172,11 +156,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad ubicacion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UbicacionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link UbicacionType }
      */
     public void setUbicacion(UbicacionType value) {
         this.ubicacion = value;
@@ -184,11 +166,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad telefono.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
-     *     
+     *
+     * @return possible object is
+     * {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
      */
     public JAXBElement<TelefonoType> getTelefono() {
         return telefono;
@@ -196,11 +176,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad telefono.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
-     *     
+     *
+     * @param value allowed object is
+     *              {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
      */
     public void setTelefono(JAXBElement<TelefonoType> value) {
         this.telefono = value;
@@ -208,11 +186,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad fax.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
-     *     
+     *
+     * @return possible object is
+     * {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
      */
     public JAXBElement<TelefonoType> getFax() {
         return fax;
@@ -220,11 +196,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad fax.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
-     *     
+     *
+     * @param value allowed object is
+     *              {@link JAXBElement }{@code <}{@link TelefonoType }{@code >}
      */
     public void setFax(JAXBElement<TelefonoType> value) {
         this.fax = value;
@@ -232,11 +206,9 @@ public class EmisorType {
 
     /**
      * Obtiene el valor de la propiedad correoElectronico.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCorreoElectronico() {
         return correoElectronico;
@@ -244,11 +216,9 @@ public class EmisorType {
 
     /**
      * Define el valor de la propiedad correoElectronico.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCorreoElectronico(String value) {
         this.correoElectronico = value;

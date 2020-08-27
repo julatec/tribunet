@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para DescuentoType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="DescuentoType"&gt;
  *   &lt;complexContent&gt;
@@ -38,13 +38,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DescuentoType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/notaCreditoElectronica", propOrder = {
-    "montoDescuento",
-    "naturalezaDescuento"
+        "montoDescuento",
+        "naturalezaDescuento"
 })
 public class DescuentoType {
 
@@ -55,11 +53,9 @@ public class DescuentoType {
 
     /**
      * Obtiene el valor de la propiedad montoDescuento.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMontoDescuento() {
         return montoDescuento;
@@ -67,11 +63,9 @@ public class DescuentoType {
 
     /**
      * Define el valor de la propiedad montoDescuento.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMontoDescuento(BigDecimal value) {
         this.montoDescuento = value;
@@ -79,11 +73,9 @@ public class DescuentoType {
 
     /**
      * Obtiene el valor de la propiedad naturalezaDescuento.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNaturalezaDescuento() {
         return naturalezaDescuento;
@@ -91,11 +83,9 @@ public class DescuentoType {
 
     /**
      * Define el valor de la propiedad naturalezaDescuento.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNaturalezaDescuento(String value) {
         this.naturalezaDescuento = value;

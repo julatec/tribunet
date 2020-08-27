@@ -11,5 +11,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 public @interface Adapt {
+    /**
+     * List of target classes to adapt.
+     *
+     * @return target classes.
+     */
     Class<?>[] value();
 }

@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para IdentificacionType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="IdentificacionType"&gt;
  *   &lt;complexContent&gt;
@@ -46,13 +46,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IdentificacionType", namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/notaCreditoElectronica", propOrder = {
-    "tipo",
-    "numero"
+        "tipo",
+        "numero"
 })
 public class IdentificacionType {
 
@@ -63,11 +61,9 @@ public class IdentificacionType {
 
     /**
      * Obtiene el valor de la propiedad tipo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTipo() {
         return tipo;
@@ -75,11 +71,9 @@ public class IdentificacionType {
 
     /**
      * Define el valor de la propiedad tipo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTipo(String value) {
         this.tipo = value;
@@ -87,11 +81,9 @@ public class IdentificacionType {
 
     /**
      * Obtiene el valor de la propiedad numero.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumero() {
         return numero;
@@ -99,11 +91,9 @@ public class IdentificacionType {
 
     /**
      * Define el valor de la propiedad numero.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumero(String value) {
         this.numero = value;

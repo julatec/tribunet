@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para CodigoType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="CodigoType"&gt;
  *   &lt;complexContent&gt;
@@ -47,13 +47,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CodigoType", namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/notaCreditoElectronica", propOrder = {
-    "tipo",
-    "codigo"
+        "tipo",
+        "codigo"
 })
 public class CodigoType {
 
@@ -64,11 +62,9 @@ public class CodigoType {
 
     /**
      * Obtiene el valor de la propiedad tipo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTipo() {
         return tipo;
@@ -76,11 +72,9 @@ public class CodigoType {
 
     /**
      * Define el valor de la propiedad tipo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTipo(String value) {
         this.tipo = value;
@@ -88,11 +82,9 @@ public class CodigoType {
 
     /**
      * Obtiene el valor de la propiedad codigo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodigo() {
         return codigo;
@@ -100,11 +92,9 @@ public class CodigoType {
 
     /**
      * Define el valor de la propiedad codigo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodigo(String value) {
         this.codigo = value;

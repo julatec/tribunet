@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.datatype.XMLGregorianCalendar;
+
 import org.w3c.dom.Element;
 
 
 /**
  * <p>Clase Java para anonymous complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -265,26 +266,24 @@ import org.w3c.dom.Element;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "clave",
-    "codigoActividad",
-    "numeroConsecutivo",
-    "fechaEmision",
-    "emisor",
-    "receptor",
-    "condicionVenta",
-    "plazoCredito",
-    "medioPago",
-    "detalleServicio",
-    "otrosCargos",
-    "resumenFactura",
-    "informacionReferencia",
-    "otros",
-    "signature"
+        "clave",
+        "codigoActividad",
+        "numeroConsecutivo",
+        "fechaEmision",
+        "emisor",
+        "receptor",
+        "condicionVenta",
+        "plazoCredito",
+        "medioPago",
+        "detalleServicio",
+        "otrosCargos",
+        "resumenFactura",
+        "informacionReferencia",
+        "otros",
+        "signature"
 })
 @XmlRootElement(name = "TiqueteElectronico", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico")
 public class TiqueteElectronico {
@@ -323,11 +322,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad clave.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getClave() {
         return clave;
@@ -335,11 +332,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad clave.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setClave(String value) {
         this.clave = value;
@@ -347,11 +342,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad codigoActividad.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCodigoActividad() {
         return codigoActividad;
@@ -359,11 +352,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad codigoActividad.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCodigoActividad(String value) {
         this.codigoActividad = value;
@@ -371,11 +362,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad numeroConsecutivo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumeroConsecutivo() {
         return numeroConsecutivo;
@@ -383,11 +372,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad numeroConsecutivo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumeroConsecutivo(String value) {
         this.numeroConsecutivo = value;
@@ -395,11 +382,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad fechaEmision.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getFechaEmision() {
         return fechaEmision;
@@ -407,11 +392,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad fechaEmision.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setFechaEmision(XMLGregorianCalendar value) {
         this.fechaEmision = value;
@@ -419,11 +402,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad emisor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmisorType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmisorType }
      */
     public EmisorType getEmisor() {
         return emisor;
@@ -431,11 +412,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad emisor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmisorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmisorType }
      */
     public void setEmisor(EmisorType value) {
         this.emisor = value;
@@ -443,11 +422,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad receptor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReceptorType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReceptorType }
      */
     public ReceptorType getReceptor() {
         return receptor;
@@ -455,11 +432,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad receptor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReceptorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReceptorType }
      */
     public void setReceptor(ReceptorType value) {
         this.receptor = value;
@@ -467,11 +442,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad condicionVenta.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCondicionVenta() {
         return condicionVenta;
@@ -479,11 +452,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad condicionVenta.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCondicionVenta(String value) {
         this.condicionVenta = value;
@@ -491,11 +462,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad plazoCredito.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPlazoCredito() {
         return plazoCredito;
@@ -503,11 +472,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad plazoCredito.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPlazoCredito(String value) {
         this.plazoCredito = value;
@@ -515,25 +482,23 @@ public class TiqueteElectronico {
 
     /**
      * Gets the value of the medioPago property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the medioPago property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMedioPago().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getMedioPago() {
         if (medioPago == null) {
@@ -544,11 +509,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad detalleServicio.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TiqueteElectronico.DetalleServicio }
-     *     
+     *
+     * @return possible object is
+     * {@link TiqueteElectronico.DetalleServicio }
      */
     public TiqueteElectronico.DetalleServicio getDetalleServicio() {
         return detalleServicio;
@@ -556,11 +519,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad detalleServicio.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TiqueteElectronico.DetalleServicio }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TiqueteElectronico.DetalleServicio }
      */
     public void setDetalleServicio(TiqueteElectronico.DetalleServicio value) {
         this.detalleServicio = value;
@@ -568,25 +529,23 @@ public class TiqueteElectronico {
 
     /**
      * Gets the value of the otrosCargos property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the otrosCargos property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOtrosCargos().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OtrosCargosType }
-     * 
-     * 
      */
     public List<OtrosCargosType> getOtrosCargos() {
         if (otrosCargos == null) {
@@ -597,11 +556,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad resumenFactura.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TiqueteElectronico.ResumenFactura }
-     *     
+     *
+     * @return possible object is
+     * {@link TiqueteElectronico.ResumenFactura }
      */
     public TiqueteElectronico.ResumenFactura getResumenFactura() {
         return resumenFactura;
@@ -609,11 +566,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad resumenFactura.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TiqueteElectronico.ResumenFactura }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TiqueteElectronico.ResumenFactura }
      */
     public void setResumenFactura(TiqueteElectronico.ResumenFactura value) {
         this.resumenFactura = value;
@@ -621,25 +576,23 @@ public class TiqueteElectronico {
 
     /**
      * Gets the value of the informacionReferencia property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the informacionReferencia property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getInformacionReferencia().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TiqueteElectronico.InformacionReferencia }
-     * 
-     * 
      */
     public List<TiqueteElectronico.InformacionReferencia> getInformacionReferencia() {
         if (informacionReferencia == null) {
@@ -650,11 +603,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad otros.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TiqueteElectronico.Otros }
-     *     
+     *
+     * @return possible object is
+     * {@link TiqueteElectronico.Otros }
      */
     public TiqueteElectronico.Otros getOtros() {
         return otros;
@@ -662,11 +613,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad otros.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TiqueteElectronico.Otros }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TiqueteElectronico.Otros }
      */
     public void setOtros(TiqueteElectronico.Otros value) {
         this.otros = value;
@@ -674,11 +623,9 @@ public class TiqueteElectronico {
 
     /**
      * Obtiene el valor de la propiedad signature.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SignatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link SignatureType }
      */
     public SignatureType getSignature() {
         return signature;
@@ -686,11 +633,9 @@ public class TiqueteElectronico {
 
     /**
      * Define el valor de la propiedad signature.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SignatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SignatureType }
      */
     public void setSignature(SignatureType value) {
         this.signature = value;
@@ -699,9 +644,9 @@ public class TiqueteElectronico {
 
     /**
      * <p>Clase Java para anonymous complex type.
-     * 
+     *
      * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-     * 
+     *
      * <pre>
      * &lt;complexType&gt;
      *   &lt;complexContent&gt;
@@ -762,12 +707,10 @@ public class TiqueteElectronico {
      *   &lt;/complexContent&gt;
      * &lt;/complexType&gt;
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "lineaDetalle"
+            "lineaDetalle"
     })
     public static class DetalleServicio {
 
@@ -776,25 +719,23 @@ public class TiqueteElectronico {
 
         /**
          * Gets the value of the lineaDetalle property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the lineaDetalle property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getLineaDetalle().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TiqueteElectronico.DetalleServicio.LineaDetalle }
-         * 
-         * 
          */
         public List<TiqueteElectronico.DetalleServicio.LineaDetalle> getLineaDetalle() {
             if (lineaDetalle == null) {
@@ -806,9 +747,9 @@ public class TiqueteElectronico {
 
         /**
          * <p>Clase Java para anonymous complex type.
-         * 
+         *
          * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-         * 
+         *
          * <pre>
          * &lt;complexType&gt;
          *   &lt;complexContent&gt;
@@ -859,26 +800,24 @@ public class TiqueteElectronico {
          *   &lt;/complexContent&gt;
          * &lt;/complexType&gt;
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "numeroLinea",
-            "codigo",
-            "codigoComercial",
-            "cantidad",
-            "unidadMedida",
-            "unidadMedidaComercial",
-            "detalle",
-            "precioUnitario",
-            "montoTotal",
-            "descuento",
-            "subTotal",
-            "baseImponible",
-            "impuesto",
-            "impuestoNeto",
-            "montoTotalLinea"
+                "numeroLinea",
+                "codigo",
+                "codigoComercial",
+                "cantidad",
+                "unidadMedida",
+                "unidadMedidaComercial",
+                "detalle",
+                "precioUnitario",
+                "montoTotal",
+                "descuento",
+                "subTotal",
+                "baseImponible",
+                "impuesto",
+                "impuestoNeto",
+                "montoTotalLinea"
         })
         public static class LineaDetalle {
 
@@ -916,11 +855,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad numeroLinea.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @return possible object is
+             * {@link BigInteger }
              */
             public BigInteger getNumeroLinea() {
                 return numeroLinea;
@@ -928,11 +865,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad numeroLinea.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigInteger }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigInteger }
              */
             public void setNumeroLinea(BigInteger value) {
                 this.numeroLinea = value;
@@ -940,11 +875,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad codigo.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCodigo() {
                 return codigo;
@@ -952,11 +885,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad codigo.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCodigo(String value) {
                 this.codigo = value;
@@ -964,25 +895,23 @@ public class TiqueteElectronico {
 
             /**
              * Gets the value of the codigoComercial property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the codigoComercial property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCodigoComercial().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link CodigoType }
-             * 
-             * 
              */
             public List<CodigoType> getCodigoComercial() {
                 if (codigoComercial == null) {
@@ -993,11 +922,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad cantidad.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getCantidad() {
                 return cantidad;
@@ -1005,11 +932,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad cantidad.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setCantidad(BigDecimal value) {
                 this.cantidad = value;
@@ -1017,11 +942,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad unidadMedida.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getUnidadMedida() {
                 return unidadMedida;
@@ -1029,11 +952,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad unidadMedida.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setUnidadMedida(String value) {
                 this.unidadMedida = value;
@@ -1041,11 +962,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad unidadMedidaComercial.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getUnidadMedidaComercial() {
                 return unidadMedidaComercial;
@@ -1053,11 +972,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad unidadMedidaComercial.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setUnidadMedidaComercial(String value) {
                 this.unidadMedidaComercial = value;
@@ -1065,11 +982,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad detalle.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getDetalle() {
                 return detalle;
@@ -1077,11 +992,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad detalle.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setDetalle(String value) {
                 this.detalle = value;
@@ -1089,11 +1002,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad precioUnitario.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getPrecioUnitario() {
                 return precioUnitario;
@@ -1101,11 +1012,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad precioUnitario.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setPrecioUnitario(BigDecimal value) {
                 this.precioUnitario = value;
@@ -1113,11 +1022,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad montoTotal.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getMontoTotal() {
                 return montoTotal;
@@ -1125,11 +1032,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad montoTotal.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setMontoTotal(BigDecimal value) {
                 this.montoTotal = value;
@@ -1137,25 +1042,23 @@ public class TiqueteElectronico {
 
             /**
              * Gets the value of the descuento property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the descuento property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getDescuento().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link DescuentoType }
-             * 
-             * 
              */
             public List<DescuentoType> getDescuento() {
                 if (descuento == null) {
@@ -1166,11 +1069,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad subTotal.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getSubTotal() {
                 return subTotal;
@@ -1178,11 +1079,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad subTotal.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setSubTotal(BigDecimal value) {
                 this.subTotal = value;
@@ -1190,11 +1089,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad baseImponible.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getBaseImponible() {
                 return baseImponible;
@@ -1202,11 +1099,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad baseImponible.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setBaseImponible(BigDecimal value) {
                 this.baseImponible = value;
@@ -1214,25 +1109,23 @@ public class TiqueteElectronico {
 
             /**
              * Gets the value of the impuesto property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the impuesto property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getImpuesto().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ImpuestoType }
-             * 
-             * 
              */
             public List<ImpuestoType> getImpuesto() {
                 if (impuesto == null) {
@@ -1243,11 +1136,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad impuestoNeto.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getImpuestoNeto() {
                 return impuestoNeto;
@@ -1255,11 +1146,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad impuestoNeto.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setImpuestoNeto(BigDecimal value) {
                 this.impuestoNeto = value;
@@ -1267,11 +1156,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad montoTotalLinea.
-             * 
-             * @return
-             *     possible object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @return possible object is
+             * {@link BigDecimal }
              */
             public BigDecimal getMontoTotalLinea() {
                 return montoTotalLinea;
@@ -1279,11 +1166,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad montoTotalLinea.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link BigDecimal }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link BigDecimal }
              */
             public void setMontoTotalLinea(BigDecimal value) {
                 this.montoTotalLinea = value;
@@ -1296,9 +1181,9 @@ public class TiqueteElectronico {
 
     /**
      * <p>Clase Java para anonymous complex type.
-     * 
+     *
      * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-     * 
+     *
      * <pre>
      * &lt;complexType&gt;
      *   &lt;complexContent&gt;
@@ -1356,16 +1241,14 @@ public class TiqueteElectronico {
      *   &lt;/complexContent&gt;
      * &lt;/complexType&gt;
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "tipoDoc",
-        "numero",
-        "fechaEmision",
-        "codigo",
-        "razon"
+            "tipoDoc",
+            "numero",
+            "fechaEmision",
+            "codigo",
+            "razon"
     })
     public static class InformacionReferencia {
 
@@ -1383,11 +1266,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad tipoDoc.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getTipoDoc() {
             return tipoDoc;
@@ -1395,11 +1276,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad tipoDoc.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setTipoDoc(String value) {
             this.tipoDoc = value;
@@ -1407,11 +1286,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad numero.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getNumero() {
             return numero;
@@ -1419,11 +1296,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad numero.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setNumero(String value) {
             this.numero = value;
@@ -1431,11 +1306,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad fechaEmision.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getFechaEmision() {
             return fechaEmision;
@@ -1443,11 +1316,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad fechaEmision.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setFechaEmision(XMLGregorianCalendar value) {
             this.fechaEmision = value;
@@ -1455,11 +1326,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad codigo.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCodigo() {
             return codigo;
@@ -1467,11 +1336,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad codigo.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCodigo(String value) {
             this.codigo = value;
@@ -1479,11 +1346,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad razon.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getRazon() {
             return razon;
@@ -1491,11 +1356,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad razon.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setRazon(String value) {
             this.razon = value;
@@ -1506,9 +1369,9 @@ public class TiqueteElectronico {
 
     /**
      * <p>Clase Java para anonymous complex type.
-     * 
+     *
      * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-     * 
+     *
      * <pre>
      * &lt;complexType&gt;
      *   &lt;complexContent&gt;
@@ -1540,13 +1403,11 @@ public class TiqueteElectronico {
      *   &lt;/complexContent&gt;
      * &lt;/complexType&gt;
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "otroTexto",
-        "otroContenido"
+            "otroTexto",
+            "otroContenido"
     })
     public static class Otros {
 
@@ -1557,25 +1418,23 @@ public class TiqueteElectronico {
 
         /**
          * Gets the value of the otroTexto property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the otroTexto property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getOtroTexto().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TiqueteElectronico.Otros.OtroTexto }
-         * 
-         * 
          */
         public List<TiqueteElectronico.Otros.OtroTexto> getOtroTexto() {
             if (otroTexto == null) {
@@ -1586,25 +1445,23 @@ public class TiqueteElectronico {
 
         /**
          * Gets the value of the otroContenido property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the otroContenido property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getOtroContenido().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TiqueteElectronico.Otros.OtroContenido }
-         * 
-         * 
          */
         public List<TiqueteElectronico.Otros.OtroContenido> getOtroContenido() {
             if (otroContenido == null) {
@@ -1616,9 +1473,9 @@ public class TiqueteElectronico {
 
         /**
          * <p>Clase Java para anonymous complex type.
-         * 
+         *
          * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-         * 
+         *
          * <pre>
          * &lt;complexType&gt;
          *   &lt;complexContent&gt;
@@ -1631,12 +1488,10 @@ public class TiqueteElectronico {
          *   &lt;/complexContent&gt;
          * &lt;/complexType&gt;
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "any"
+                "any"
         })
         public static class OtroContenido {
 
@@ -1647,12 +1502,10 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad any.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Object }
-             *     {@link Element }
-             *     
+             *
+             * @return possible object is
+             * {@link Object }
+             * {@link Element }
              */
             public Object getAny() {
                 return any;
@@ -1660,12 +1513,10 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad any.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Object }
-             *     {@link Element }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link Object }
+             *              {@link Element }
              */
             public void setAny(Object value) {
                 this.any = value;
@@ -1673,11 +1524,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad codigo.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCodigo() {
                 return codigo;
@@ -1685,11 +1534,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad codigo.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCodigo(String value) {
                 this.codigo = value;
@@ -1700,9 +1547,9 @@ public class TiqueteElectronico {
 
         /**
          * <p>Clase Java para anonymous complex type.
-         * 
+         *
          * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-         * 
+         *
          * <pre>
          * &lt;complexType&gt;
          *   &lt;simpleContent&gt;
@@ -1712,12 +1559,10 @@ public class TiqueteElectronico {
          *   &lt;/simpleContent&gt;
          * &lt;/complexType&gt;
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class OtroTexto {
 
@@ -1728,11 +1573,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad value.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getValue() {
                 return value;
@@ -1740,11 +1583,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad value.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setValue(String value) {
                 this.value = value;
@@ -1752,11 +1593,9 @@ public class TiqueteElectronico {
 
             /**
              * Obtiene el valor de la propiedad codigo.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getCodigo() {
                 return codigo;
@@ -1764,11 +1603,9 @@ public class TiqueteElectronico {
 
             /**
              * Define el valor de la propiedad codigo.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setCodigo(String value) {
                 this.codigo = value;
@@ -1781,9 +1618,9 @@ public class TiqueteElectronico {
 
     /**
      * <p>Clase Java para anonymous complex type.
-     * 
+     *
      * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
-     * 
+     *
      * <pre>
      * &lt;complexType&gt;
      *   &lt;complexContent&gt;
@@ -1811,28 +1648,26 @@ public class TiqueteElectronico {
      *   &lt;/complexContent&gt;
      * &lt;/complexType&gt;
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "codigoTipoMoneda",
-        "totalServGravados",
-        "totalServExentos",
-        "totalServExonerado",
-        "totalMercanciasGravadas",
-        "totalMercanciasExentas",
-        "totalMercExonerada",
-        "totalGravado",
-        "totalExento",
-        "totalExonerado",
-        "totalVenta",
-        "totalDescuentos",
-        "totalVentaNeta",
-        "totalImpuesto",
-        "totalIVADevuelto",
-        "totalOtrosCargos",
-        "totalComprobante"
+            "codigoTipoMoneda",
+            "totalServGravados",
+            "totalServExentos",
+            "totalServExonerado",
+            "totalMercanciasGravadas",
+            "totalMercanciasExentas",
+            "totalMercExonerada",
+            "totalGravado",
+            "totalExento",
+            "totalExonerado",
+            "totalVenta",
+            "totalDescuentos",
+            "totalVentaNeta",
+            "totalImpuesto",
+            "totalIVADevuelto",
+            "totalOtrosCargos",
+            "totalComprobante"
     })
     public static class ResumenFactura {
 
@@ -1873,11 +1708,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad codigoTipoMoneda.
-         * 
-         * @return
-         *     possible object is
-         *     {@link CodigoMonedaType }
-         *     
+         *
+         * @return possible object is
+         * {@link CodigoMonedaType }
          */
         public CodigoMonedaType getCodigoTipoMoneda() {
             return codigoTipoMoneda;
@@ -1885,11 +1718,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad codigoTipoMoneda.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link CodigoMonedaType }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link CodigoMonedaType }
          */
         public void setCodigoTipoMoneda(CodigoMonedaType value) {
             this.codigoTipoMoneda = value;
@@ -1897,11 +1728,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalServGravados.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalServGravados() {
             return totalServGravados;
@@ -1909,11 +1738,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalServGravados.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalServGravados(BigDecimal value) {
             this.totalServGravados = value;
@@ -1921,11 +1748,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalServExentos.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalServExentos() {
             return totalServExentos;
@@ -1933,11 +1758,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalServExentos.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalServExentos(BigDecimal value) {
             this.totalServExentos = value;
@@ -1945,11 +1768,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalServExonerado.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalServExonerado() {
             return totalServExonerado;
@@ -1957,11 +1778,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalServExonerado.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalServExonerado(BigDecimal value) {
             this.totalServExonerado = value;
@@ -1969,11 +1788,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalMercanciasGravadas.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalMercanciasGravadas() {
             return totalMercanciasGravadas;
@@ -1981,11 +1798,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalMercanciasGravadas.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalMercanciasGravadas(BigDecimal value) {
             this.totalMercanciasGravadas = value;
@@ -1993,11 +1808,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalMercanciasExentas.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalMercanciasExentas() {
             return totalMercanciasExentas;
@@ -2005,11 +1818,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalMercanciasExentas.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalMercanciasExentas(BigDecimal value) {
             this.totalMercanciasExentas = value;
@@ -2017,11 +1828,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalMercExonerada.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalMercExonerada() {
             return totalMercExonerada;
@@ -2029,11 +1838,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalMercExonerada.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalMercExonerada(BigDecimal value) {
             this.totalMercExonerada = value;
@@ -2041,11 +1848,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalGravado.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalGravado() {
             return totalGravado;
@@ -2053,11 +1858,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalGravado.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalGravado(BigDecimal value) {
             this.totalGravado = value;
@@ -2065,11 +1868,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalExento.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalExento() {
             return totalExento;
@@ -2077,11 +1878,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalExento.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalExento(BigDecimal value) {
             this.totalExento = value;
@@ -2089,11 +1888,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalExonerado.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalExonerado() {
             return totalExonerado;
@@ -2101,11 +1898,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalExonerado.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalExonerado(BigDecimal value) {
             this.totalExonerado = value;
@@ -2113,11 +1908,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalVenta.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalVenta() {
             return totalVenta;
@@ -2125,11 +1918,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalVenta.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalVenta(BigDecimal value) {
             this.totalVenta = value;
@@ -2137,11 +1928,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalDescuentos.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalDescuentos() {
             return totalDescuentos;
@@ -2149,11 +1938,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalDescuentos.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalDescuentos(BigDecimal value) {
             this.totalDescuentos = value;
@@ -2161,11 +1948,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalVentaNeta.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalVentaNeta() {
             return totalVentaNeta;
@@ -2173,11 +1958,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalVentaNeta.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalVentaNeta(BigDecimal value) {
             this.totalVentaNeta = value;
@@ -2185,11 +1968,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalImpuesto.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalImpuesto() {
             return totalImpuesto;
@@ -2197,11 +1978,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalImpuesto.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalImpuesto(BigDecimal value) {
             this.totalImpuesto = value;
@@ -2209,11 +1988,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalIVADevuelto.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalIVADevuelto() {
             return totalIVADevuelto;
@@ -2221,11 +1998,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalIVADevuelto.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalIVADevuelto(BigDecimal value) {
             this.totalIVADevuelto = value;
@@ -2233,11 +2008,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalOtrosCargos.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalOtrosCargos() {
             return totalOtrosCargos;
@@ -2245,11 +2018,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalOtrosCargos.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalOtrosCargos(BigDecimal value) {
             this.totalOtrosCargos = value;
@@ -2257,11 +2028,9 @@ public class TiqueteElectronico {
 
         /**
          * Obtiene el valor de la propiedad totalComprobante.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @return possible object is
+         * {@link BigDecimal }
          */
         public BigDecimal getTotalComprobante() {
             return totalComprobante;
@@ -2269,11 +2038,9 @@ public class TiqueteElectronico {
 
         /**
          * Define el valor de la propiedad totalComprobante.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigDecimal }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigDecimal }
          */
         public void setTotalComprobante(BigDecimal value) {
             this.totalComprobante = value;
