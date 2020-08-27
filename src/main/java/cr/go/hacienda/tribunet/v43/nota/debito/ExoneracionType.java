@@ -20,9 +20,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Clase Java para ExoneracionType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="ExoneracionType"&gt;
  *   &lt;complexContent&gt;
@@ -70,17 +70,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExoneracionType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/notaDebitoElectronica", propOrder = {
-    "tipoDocumento",
-    "numeroDocumento",
-    "nombreInstitucion",
-    "fechaEmision",
-    "porcentajeExoneracion",
-    "montoExoneracion"
+        "tipoDocumento",
+        "numeroDocumento",
+        "nombreInstitucion",
+        "fechaEmision",
+        "porcentajeExoneracion",
+        "montoExoneracion"
 })
 public class ExoneracionType {
 
@@ -100,11 +98,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad tipoDocumento.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTipoDocumento() {
         return tipoDocumento;
@@ -112,11 +108,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad tipoDocumento.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTipoDocumento(String value) {
         this.tipoDocumento = value;
@@ -124,11 +118,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad numeroDocumento.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumeroDocumento() {
         return numeroDocumento;
@@ -136,11 +128,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad numeroDocumento.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumeroDocumento(String value) {
         this.numeroDocumento = value;
@@ -148,11 +138,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad nombreInstitucion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombreInstitucion() {
         return nombreInstitucion;
@@ -160,11 +148,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad nombreInstitucion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombreInstitucion(String value) {
         this.nombreInstitucion = value;
@@ -172,11 +158,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad fechaEmision.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getFechaEmision() {
         return fechaEmision;
@@ -184,11 +168,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad fechaEmision.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setFechaEmision(XMLGregorianCalendar value) {
         this.fechaEmision = value;
@@ -196,11 +178,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad porcentajeExoneracion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getPorcentajeExoneracion() {
         return porcentajeExoneracion;
@@ -208,11 +188,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad porcentajeExoneracion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setPorcentajeExoneracion(BigInteger value) {
         this.porcentajeExoneracion = value;
@@ -220,11 +198,9 @@ public class ExoneracionType {
 
     /**
      * Obtiene el valor de la propiedad montoExoneracion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMontoExoneracion() {
         return montoExoneracion;
@@ -232,11 +208,9 @@ public class ExoneracionType {
 
     /**
      * Define el valor de la propiedad montoExoneracion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMontoExoneracion(BigDecimal value) {
         this.montoExoneracion = value;

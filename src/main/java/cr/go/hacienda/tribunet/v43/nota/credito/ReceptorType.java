@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para ReceptorType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="ReceptorType"&gt;
  *   &lt;complexContent&gt;
@@ -68,20 +68,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReceptorType", namespace = "https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/notaCreditoElectronica", propOrder = {
-    "nombre",
-    "identificacion",
-    "identificacionExtranjero",
-    "nombreComercial",
-    "ubicacion",
-    "otrasSenasExtranjero",
-    "telefono",
-    "fax",
-    "correoElectronico"
+        "nombre",
+        "identificacion",
+        "identificacionExtranjero",
+        "nombreComercial",
+        "ubicacion",
+        "otrasSenasExtranjero",
+        "telefono",
+        "fax",
+        "correoElectronico"
 })
 public class ReceptorType {
 
@@ -106,11 +104,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad nombre.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombre() {
         return nombre;
@@ -118,11 +114,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad nombre.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombre(String value) {
         this.nombre = value;
@@ -130,11 +124,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad identificacion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link IdentificacionType }
-     *     
+     *
+     * @return possible object is
+     * {@link IdentificacionType }
      */
     public IdentificacionType getIdentificacion() {
         return identificacion;
@@ -142,11 +134,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad identificacion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link IdentificacionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link IdentificacionType }
      */
     public void setIdentificacion(IdentificacionType value) {
         this.identificacion = value;
@@ -154,11 +144,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad identificacionExtranjero.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIdentificacionExtranjero() {
         return identificacionExtranjero;
@@ -166,11 +154,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad identificacionExtranjero.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIdentificacionExtranjero(String value) {
         this.identificacionExtranjero = value;
@@ -178,11 +164,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad nombreComercial.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombreComercial() {
         return nombreComercial;
@@ -190,11 +174,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad nombreComercial.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombreComercial(String value) {
         this.nombreComercial = value;
@@ -202,11 +184,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad ubicacion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UbicacionType }
-     *     
+     *
+     * @return possible object is
+     * {@link UbicacionType }
      */
     public UbicacionType getUbicacion() {
         return ubicacion;
@@ -214,11 +194,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad ubicacion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UbicacionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link UbicacionType }
      */
     public void setUbicacion(UbicacionType value) {
         this.ubicacion = value;
@@ -226,11 +204,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad otrasSenasExtranjero.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOtrasSenasExtranjero() {
         return otrasSenasExtranjero;
@@ -238,11 +214,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad otrasSenasExtranjero.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOtrasSenasExtranjero(String value) {
         this.otrasSenasExtranjero = value;
@@ -250,11 +224,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad telefono.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TelefonoType }
-     *     
+     *
+     * @return possible object is
+     * {@link TelefonoType }
      */
     public TelefonoType getTelefono() {
         return telefono;
@@ -262,11 +234,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad telefono.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TelefonoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TelefonoType }
      */
     public void setTelefono(TelefonoType value) {
         this.telefono = value;
@@ -274,11 +244,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad fax.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TelefonoType }
-     *     
+     *
+     * @return possible object is
+     * {@link TelefonoType }
      */
     public TelefonoType getFax() {
         return fax;
@@ -286,11 +254,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad fax.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TelefonoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link TelefonoType }
      */
     public void setFax(TelefonoType value) {
         this.fax = value;
@@ -298,11 +264,9 @@ public class ReceptorType {
 
     /**
      * Obtiene el valor de la propiedad correoElectronico.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCorreoElectronico() {
         return correoElectronico;
@@ -310,11 +274,9 @@ public class ReceptorType {
 
     /**
      * Define el valor de la propiedad correoElectronico.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCorreoElectronico(String value) {
         this.correoElectronico = value;

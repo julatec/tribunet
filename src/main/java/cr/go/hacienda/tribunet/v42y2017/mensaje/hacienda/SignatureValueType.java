@@ -21,9 +21,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Clase Java para SignatureValueType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="SignatureValueType"&gt;
  *   &lt;simpleContent&gt;
@@ -33,12 +33,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/simpleContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SignatureValueType", propOrder = {
-    "value"
+        "value"
 })
 public class SignatureValueType {
 
@@ -52,10 +50,9 @@ public class SignatureValueType {
 
     /**
      * Obtiene el valor de la propiedad value.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
+     *
+     * @return possible object is
+     * byte[]
      */
     public byte[] getValue() {
         return value;
@@ -63,10 +60,9 @@ public class SignatureValueType {
 
     /**
      * Define el valor de la propiedad value.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
+     *
+     * @param value allowed object is
+     *              byte[]
      */
     public void setValue(byte[] value) {
         this.value = value;
@@ -74,11 +70,9 @@ public class SignatureValueType {
 
     /**
      * Obtiene el valor de la propiedad id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -86,11 +80,9 @@ public class SignatureValueType {
 
     /**
      * Define el valor de la propiedad id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;

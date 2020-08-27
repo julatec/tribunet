@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para RSAKeyValueType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="RSAKeyValueType"&gt;
  *   &lt;complexContent&gt;
@@ -31,13 +31,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RSAKeyValueType", propOrder = {
-    "modulus",
-    "exponent"
+        "modulus",
+        "exponent"
 })
 public class RSAKeyValueType {
 
@@ -48,10 +46,9 @@ public class RSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad modulus.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
+     *
+     * @return possible object is
+     * byte[]
      */
     public byte[] getModulus() {
         return modulus;
@@ -59,10 +56,9 @@ public class RSAKeyValueType {
 
     /**
      * Define el valor de la propiedad modulus.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
+     *
+     * @param value allowed object is
+     *              byte[]
      */
     public void setModulus(byte[] value) {
         this.modulus = value;
@@ -70,10 +66,9 @@ public class RSAKeyValueType {
 
     /**
      * Obtiene el valor de la propiedad exponent.
-     * 
-     * @return
-     *     possible object is
-     *     byte[]
+     *
+     * @return possible object is
+     * byte[]
      */
     public byte[] getExponent() {
         return exponent;
@@ -81,10 +76,9 @@ public class RSAKeyValueType {
 
     /**
      * Define el valor de la propiedad exponent.
-     * 
-     * @param value
-     *     allowed object is
-     *     byte[]
+     *
+     * @param value allowed object is
+     *              byte[]
      */
     public void setExponent(byte[] value) {
         this.exponent = value;

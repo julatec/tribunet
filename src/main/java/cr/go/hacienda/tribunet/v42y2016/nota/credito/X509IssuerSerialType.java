@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para X509IssuerSerialType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="X509IssuerSerialType"&gt;
  *   &lt;complexContent&gt;
@@ -32,13 +32,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "X509IssuerSerialType", propOrder = {
-    "x509IssuerName",
-    "x509SerialNumber"
+        "x509IssuerName",
+        "x509SerialNumber"
 })
 public class X509IssuerSerialType {
 
@@ -49,11 +47,9 @@ public class X509IssuerSerialType {
 
     /**
      * Obtiene el valor de la propiedad x509IssuerName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getX509IssuerName() {
         return x509IssuerName;
@@ -61,11 +57,9 @@ public class X509IssuerSerialType {
 
     /**
      * Define el valor de la propiedad x509IssuerName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setX509IssuerName(String value) {
         this.x509IssuerName = value;
@@ -73,11 +67,9 @@ public class X509IssuerSerialType {
 
     /**
      * Obtiene el valor de la propiedad x509SerialNumber.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getX509SerialNumber() {
         return x509SerialNumber;
@@ -85,11 +77,9 @@ public class X509IssuerSerialType {
 
     /**
      * Define el valor de la propiedad x509SerialNumber.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setX509SerialNumber(BigInteger value) {
         this.x509SerialNumber = value;

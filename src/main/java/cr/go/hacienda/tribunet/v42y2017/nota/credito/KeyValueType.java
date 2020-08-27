@@ -18,14 +18,15 @@ import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlMixed;
 import javax.xml.bind.annotation.XmlType;
+
 import org.w3c.dom.Element;
 
 
 /**
  * <p>Clase Java para KeyValueType complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="KeyValueType"&gt;
  *   &lt;complexContent&gt;
@@ -39,18 +40,16 @@ import org.w3c.dom.Element;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "KeyValueType", propOrder = {
-    "content"
+        "content"
 })
 public class KeyValueType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "DSAKeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "RSAKeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "DSAKeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class, required = false),
+            @XmlElementRef(name = "RSAKeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class, required = false)
     })
     @XmlMixed
     @XmlAnyElement(lax = true)
@@ -58,20 +57,20 @@ public class KeyValueType {
 
     /**
      * Gets the value of the content property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the content property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getContent().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Element }
@@ -79,8 +78,6 @@ public class KeyValueType {
      * {@link JAXBElement }{@code <}{@link DSAKeyValueType }{@code >}
      * {@link JAXBElement }{@code <}{@link RSAKeyValueType }{@code >}
      * {@link Object }
-     * 
-     * 
      */
     public List<Object> getContent() {
         if (content == null) {

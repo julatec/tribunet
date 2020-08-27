@@ -28,7 +28,14 @@ import static javax.tools.Diagnostic.Kind.NOTE;
 @AutoService(Processor.class)
 public class AdapterProcessor extends AbstractProcessor {
 
+    /**
+     * Suffix added to each Service Adapter generated.
+     */
     static final String suffix = "Factory";
+
+    /**
+     * Messager to report messages to the compiler.
+     */
     private Messager messager;
 
     @Override
@@ -233,22 +240,22 @@ public class AdapterProcessor extends AbstractProcessor {
         }
     }
 
-    protected String simpleName(String name) {
+    private String simpleName(String name) {
         String[] parts = name.split("\\.");
         return parts[parts.length - 1];
     }
 
-    protected String factoryName(String name) {
+    private String factoryName(String name) {
         String[] parts = name.split("\\.");
         String[] parts2 = parts[parts.length - 1].split("\\$");
         return parts2[parts2.length - 1] + suffix;
     }
 
-    protected String toSafeName(String name) {
+    private String toSafeName(String name) {
         return name.replace('.', '_').replace('$', '_');
     }
 
-    protected String toSafeName(Class<?> clazz) {
+    private String toSafeName(Class<?> clazz) {
         return clazz.getCanonicalName().replace('.', '_');
     }
 

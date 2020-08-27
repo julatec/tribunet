@@ -19,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Clase Java para anonymous complex type.
- * 
+ *
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -120,23 +120,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "clave",
-    "nombreEmisor",
-    "tipoIdentificacionEmisor",
-    "numeroCedulaEmisor",
-    "nombreReceptor",
-    "tipoIdentificacionReceptor",
-    "numeroCedulaReceptor",
-    "mensaje",
-    "detalleMensaje",
-    "montoTotalImpuesto",
-    "totalFactura",
-    "signature"
+        "clave",
+        "nombreEmisor",
+        "tipoIdentificacionEmisor",
+        "numeroCedulaEmisor",
+        "nombreReceptor",
+        "tipoIdentificacionReceptor",
+        "numeroCedulaReceptor",
+        "mensaje",
+        "detalleMensaje",
+        "montoTotalImpuesto",
+        "totalFactura",
+        "signature"
 })
 @XmlRootElement(name = "MensajeHacienda", namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/mensajeHacienda")
 public class MensajeHacienda {
@@ -168,11 +166,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad clave.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getClave() {
         return clave;
@@ -180,11 +176,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad clave.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setClave(String value) {
         this.clave = value;
@@ -192,11 +186,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad nombreEmisor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombreEmisor() {
         return nombreEmisor;
@@ -204,11 +196,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad nombreEmisor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombreEmisor(String value) {
         this.nombreEmisor = value;
@@ -216,11 +206,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad tipoIdentificacionEmisor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTipoIdentificacionEmisor() {
         return tipoIdentificacionEmisor;
@@ -228,11 +216,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad tipoIdentificacionEmisor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTipoIdentificacionEmisor(String value) {
         this.tipoIdentificacionEmisor = value;
@@ -240,11 +226,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad numeroCedulaEmisor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumeroCedulaEmisor() {
         return numeroCedulaEmisor;
@@ -252,11 +236,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad numeroCedulaEmisor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumeroCedulaEmisor(String value) {
         this.numeroCedulaEmisor = value;
@@ -264,11 +246,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad nombreReceptor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNombreReceptor() {
         return nombreReceptor;
@@ -276,11 +256,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad nombreReceptor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNombreReceptor(String value) {
         this.nombreReceptor = value;
@@ -288,11 +266,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad tipoIdentificacionReceptor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTipoIdentificacionReceptor() {
         return tipoIdentificacionReceptor;
@@ -300,11 +276,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad tipoIdentificacionReceptor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTipoIdentificacionReceptor(String value) {
         this.tipoIdentificacionReceptor = value;
@@ -312,11 +286,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad numeroCedulaReceptor.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumeroCedulaReceptor() {
         return numeroCedulaReceptor;
@@ -324,11 +296,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad numeroCedulaReceptor.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumeroCedulaReceptor(String value) {
         this.numeroCedulaReceptor = value;
@@ -336,11 +306,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad mensaje.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMensaje() {
         return mensaje;
@@ -348,11 +316,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad mensaje.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMensaje(BigInteger value) {
         this.mensaje = value;
@@ -360,11 +326,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad detalleMensaje.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDetalleMensaje() {
         return detalleMensaje;
@@ -372,11 +336,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad detalleMensaje.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDetalleMensaje(String value) {
         this.detalleMensaje = value;
@@ -384,11 +346,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad montoTotalImpuesto.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMontoTotalImpuesto() {
         return montoTotalImpuesto;
@@ -396,11 +356,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad montoTotalImpuesto.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMontoTotalImpuesto(BigDecimal value) {
         this.montoTotalImpuesto = value;
@@ -408,11 +366,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad totalFactura.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getTotalFactura() {
         return totalFactura;
@@ -420,11 +376,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad totalFactura.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setTotalFactura(BigDecimal value) {
         this.totalFactura = value;
@@ -432,11 +386,9 @@ public class MensajeHacienda {
 
     /**
      * Obtiene el valor de la propiedad signature.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SignatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link SignatureType }
      */
     public SignatureType getSignature() {
         return signature;
@@ -444,11 +396,9 @@ public class MensajeHacienda {
 
     /**
      * Define el valor de la propiedad signature.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SignatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SignatureType }
      */
     public void setSignature(SignatureType value) {
         this.signature = value;
