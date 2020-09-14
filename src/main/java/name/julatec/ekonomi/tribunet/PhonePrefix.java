@@ -1,4 +1,4 @@
-package cr.go.hacienda.tribunet;
+package name.julatec.ekonomi.tribunet;
 
 import java.util.HashMap;
 import java.util.Map;

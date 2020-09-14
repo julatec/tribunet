@@ -1,4 +1,4 @@
-package cr.go.hacienda.tribunet;
+package name.julatec.ekonomi.tribunet;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -66,7 +66,7 @@ public class Clave implements Comparable<Clave> {
     }
 
     public static Clave of(String country, Date date, String id, String sequence) {
-        Situation situation = Situation.Manual;
+        Situation situation = Situation.SITUATION;
         String checksum = String.valueOf(Math.abs(new HashCodeBuilder()
                 .append(country)
                 .append(date)
@@ -130,15 +130,15 @@ public class Clave implements Comparable<Clave> {
 
     public enum Situation {
         NOT_USED_0,
-        Normal,
-        Contingencia,
-        SinInternet,
+        NORMAL,
+        CONTINGENCIA,
+        SIN_INTERNET,
         NOT_USED_4,
         NOT_USED_5,
         NOT_USED_6,
         NOT_USED_7,
         NOT_USED_8,
-        Manual;
+        SITUATION;
 
         @Override
         public String toString() {

@@ -1,4 +1,4 @@
-package cr.go.hacienda.tribunet;
+package name.julatec.ekonomi.tribunet;
 
 import java.math.BigDecimal;
 import java.util.Optional;
