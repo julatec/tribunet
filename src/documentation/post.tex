@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage[hyphens]{url}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{listings}
+\bibliographystyle{plain}
+
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
+
+\title{Too much of the same \\
+{\small Annotation Processor and the Adapter Design Pattern}}
+\author{J Ulate C}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{The journey begins}
+
+The first part of a journey might be the plan and the goal, but real life many times lacks of the those gifts. So, I started with taking a look on the kind of data that we require to handle.
+The the proper place is the official documentation \cite{MinisteriodeHacienda2020PortalEstructuras}:
+
+\begin{enumerate}
+\item Estructuras XML y Anexos Version 1.0
+\item Estructuras XML y Anexos Version 2.0
+\item Estructuras XML y Anexos Version 3.0
+\item Estructuras XML y Anexos Version 3.1
+\item Estructuras XML y Anexos Version 4.0
+\item Estructuras XML y Anexos Version 4.1
+\item Estructuras XML y Anexos \textbf{Version 4.2}
+\item Estructuras XML y Anexos \textbf{Version 4.3}
+\end{enumerate}
+
+There is nice a detail here, the \texttt{Version 4.2} has two sub-versions based on the year. Each one of these items contains a list of files with \texttt{XSD} files. 
+
+\begin{itemize}
+\item \texttt{Mensaje Hacienda\_v4.2.xsd}
+\item \texttt{FacturaElectronica\_V.4.2.xsd}
+\item \texttt{Mensaje Receptor\_v4.2.xsd}
+\item \texttt{Nota Credito Electronica\_v4.2.xsd}
+\item \texttt{Nota Debito Electronica\_v4.2.xsd}
+\item \texttt{Tiquete Electronico\_v4.2.xsd}
+\end{itemize}
+
+The \texttt{Version 4.3} includes new members to the party, apart for the newer versions of the files above:
+
+\begin{itemize}
+\item \texttt{FacturaElectronicaCompra\_V4.3.xsd}
+\item \texttt{FacturaElectronicaExportacion\_V4.3.xsd}
+\end{itemize}
+
+The first challenge start just after downloading the files. Taking a look on them, we can count more than 600 different entities. Probably too much to code by hand.
+
+\section{Generating the entities from the \texttt{XSD} files}
+
+After some research, \texttt{JAXB} \cite{Apache2020ApacheCxf-xjc-plugin} seems to be an old, and still valid, approach for these kind of situations. The \texttt{XSD} where placed on the \href{https://github.com/julatec/tribunet/tree/master/src/main/resources/xsd/tribunet}{\texttt{src/main/resources/xsd/tribunet/}} folder. For further details take a look on the \href{https://github.com/julatec/tribunet/blob/master/pom.xml}{\texttt{pom.xml}} file. On \fullref{lst:xsdgenerationsample} we can take a look how the code generation was configured.
+
+\lstinputlisting[
+language=XML,
+label=lst:xsdgenerationsample,
+caption={Option for code generation from \texttt{XSD} file}
+]{listings/xsdgenerationsample.xml}
+
+We are not going to place all the configurations and files generated here since there 
+
+\section{Working the generated classes}
+
+Once the files were generated we can see that there are many of them that corresponds to the \textit{same} entity, at least the same concept implemented in a similar way through different versions. The details are in \fullref{tbl:entities-repeated}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[ht]
+\begin{tabular}{@{}rl@{}}
+\toprule
+\textbf{Number of Entities} & \multicolumn{1}{c}{\textbf{Concept}} \\ \midrule
+14                          & UbicacionType.java                   \\
+14                          & TelefonoType.java                    \\
+14                          & ReceptorType.java                    \\
+14                          & ImpuestoType.java                    \\
+14                          & IdentificacionType.java              \\
+14                          & ExoneracionType.java                 \\
+14                          & EmisorType.java                      \\
+14                          & CodigoType.java                      \\
+6                           & OtrosCargosType.java                 \\
+6                           & DescuentoType.java                   \\
+6                           & CodigoMonedaType.java                \\
+4                           & ImpuestoResumenType.java             \\
+3                           & TiqueteElectronico.java              \\
+3                           & NotaDebitoElectronica.java           \\
+3                           & NotaCreditoElectronica.java          \\
+3                           & MensajeReceptor.java                 \\
+3                           & MensajeHacienda.java                 \\
+3                           & FacturaElectronica.java              \\
+1                           & FacturaElectronicaExportacion.java   \\
+1                           & FacturaElectronicaCompra.java        \\ \bottomrule
+\end{tabular}
+\caption{Number of repeated entities among different versions and documents}
+\label{tbl:entities-repeated}
+\end{table}
+
+\medskip
+\bibliography{references}
+\end{document}

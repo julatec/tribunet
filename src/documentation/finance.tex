@@ -1,0 +1,4 @@
+END { 
+  system ("make4ht -e ../mybuild.mk4 -c ../my.cfg --utf8 main"); 
+  system('zip -r allfiles.zip . -x *.cache*');
+}

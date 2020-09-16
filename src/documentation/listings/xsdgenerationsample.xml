@@ -1,0 +1,6 @@
+<xsdOption><xsd>
+${basedir}/src/main/resources/xsd/tribunet/
+v42y2017/FacturaElectronica_V.4.2.xsd</xsd>
+<packagename>cr.go.hacienda.tribunet.v42y2017.factura</packagename>
+<extension>false</extension>
+</xsdOption>
