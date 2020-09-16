@@ -1,0 +1,4 @@
+END { 
+  system ("make4ht -e post.mk4 -c post.cfg --utf8 main"); 
+  system('zip -r allfiles.zip . -x *.cache*');
+}
