@@ -6,11 +6,12 @@
 \usepackage{natbib}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage[margin=0.5in]{geometry}
 \bibliographystyle{plain}
 
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
 
-\title{Too much of the same \\
+\title{When you have too much of the same \\
 {\small Annotation Processor and the Adapter Design Pattern}}
 \author{J Ulate C}
 \date{\today}
@@ -21,8 +22,8 @@
 
 \section{The journey begins}
 
-The first part of a journey might be the plan and the goal, but real life many times lacks of the those gifts. So, I started with taking a look on the kind of data that we require to handle.
-The the proper place is the official documentation \cite{MinisteriodeHacienda2020PortalEstructuras}:
+The first part of a journey might be the plan and the goal, but real life many times lack those gifts. So, I started by taking a look at the kind of data that we require to handle.
+The proper place is the official documentation \cite{MinisteriodeHacienda2020PortalEstructuras}:
 
 \begin{enumerate}
 \item Estructuras XML y Anexos Version 1.0
@@ -35,7 +36,7 @@ The the proper place is the official documentation \cite{MinisteriodeHacienda202
 \item Estructuras XML y Anexos \textbf{Version 4.3}
 \end{enumerate}
 
-There is nice a detail here, the \texttt{Version 4.2} has two sub-versions based on the year. Each one of these items contains a list of files with \texttt{XSD} files. 
+There is an excellent detail here; the \texttt{Version 4.2} has two sub-versions based on the year. Each one of these items contains a list of files with \texttt{XSD} files. 
 
 \begin{itemize}
 \item \texttt{Mensaje Hacienda\_v4.2.xsd}
@@ -53,7 +54,7 @@ The \texttt{Version 4.3} includes new members to the party, apart for the newer 
 \item \texttt{FacturaElectronicaExportacion\_V4.3.xsd}
 \end{itemize}
 
-The first challenge start just after downloading the files. Taking a look on them, we can count more than 600 different entities. Probably too much to code by hand.
+The first challenge starts just after downloading the files. Taking a look at them, we can count more than 600 different entities. Probably too much to code by hand.
 
 \section{Generating the entities from the \texttt{XSD} files}
 
@@ -65,18 +66,19 @@ label=lst:xsdgenerationsample,
 caption={Option for code generation from \texttt{XSD} file}
 ]{listings/xsdgenerationsample.xml}
 
-We are not going to place all the configurations and files generated here since there 
+We are not going to place all the configurations and files generated here since they are generated in the source code.
 
 \section{Working the generated classes}
 
-Once the files were generated we can see that there are many of them that corresponds to the \textit{same} entity, at least the same concept implemented in a similar way through different versions. The details are in \fullref{tbl:entities-repeated}.
+Once the files were generated, we can see that many of them correspond to the \textit{same} entity, at least the same concept implemented similarly through different versions. The details are in \fullref{tbl:entities-repeated}. As an example we choose \texttt{ImpuestoType} and we take a look on the properties, in \fullref{tbl:ImpuestoTypeProperties} we show which properties are provided in each implementation. After \texttt{v4.3}, two new properties (namely \texttt{codigoTarifa} and \texttt{factorIVA}) where added to the equation. We can accept this as part of the normal \textit{evolution} of the models through time. Nevertheless, at this point, the reader can have an idea that implementing 14 times the same model, and half of them have different implementations will be an issue.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[ht]
+\begin{table}[h]
+\centering
 \begin{tabular}{@{}rl@{}}
 \toprule
-\textbf{Number of Entities} & \multicolumn{1}{c}{\textbf{Concept}} \\ \midrule
+\textbf{Number of Entities} & \multicolumn{1}{c}{\textbf{Entity/Concept}} \\ \midrule
 14                          & UbicacionType.java                   \\
 14                          & TelefonoType.java                    \\
 14                          & ReceptorType.java                    \\
@@ -98,9 +100,87 @@ Once the files were generated we can see that there are many of them that corres
 1                           & FacturaElectronicaExportacion.java   \\
 1                           & FacturaElectronicaCompra.java        \\ \bottomrule
 \end{tabular}
-\caption{Number of repeated entities among different versions and documents}
+\caption{Number of repeated entities among different versions and documents.}
 \label{tbl:entities-repeated}
 \end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\multicolumn{1}{c}{Entity (cr.go.hacienda.tribunet)} & \multicolumn{6}{c}{Properties}                                   \\
+\midrule
+v42y2016.factura.ImpuestoType                        & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2016.tiquete.ImpuestoType                        & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2016.nota.credito.ImpuestoType                   & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2016.nota.credito.ImpuestoType                   & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2017.factura.ImpuestoType                        & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2017.tiquete.ImpuestoType                        & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2017.nota.credito.ImpuestoType                   & codigo &              & tarifa &           & monto & exoneracion \\
+v42y2017.nota.debito.ImpuestoType                    & codigo &              & tarifa &           & monto & exoneracion \\
+v43.factura.ImpuestoType                             & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+v43.factura.compra.ImpuestoType                      & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+v43.factura.exportacion.ImpuestoType                 & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+v43.tiquete.ImpuestoType.class                       & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+v43.nota.credito.ImpuestoType                        & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+v43.nota.debito.ImpuestoType                         & codigo & codigoTarifa & tarifa & factorIVA & monto & exoneracion \\
+\bottomrule
+\end{tabular}
+\caption{Properties for multiplementations of \texttt{ImpuestoType} entity}
+\label{tbl:ImpuestoTypeProperties}
+\end{table}
+
+\section{The adapter }
+
+I usually say that design patterns are a bunch of good intentions. However, in this case, I am going to implement one of the most common of them, the \textit{adapter} \cite{Freeman2004HeadPatterns}. First, we defined that we needed all the fields. All of them are required. However, we can return a default value for those not implemented on a version before \texttt{v4.3}. We can start writing the target interface, in the case we can see the example on \fullref{lst:impuestotypeexample1}. The fields that do not have a \texttt{default} implementation are those that are common to all interfaces. In the other hand, those with a \texttt{default} implementation are missing in one or more implementations.
+
+Additionally, on \fullref{lst:adaptexample1} we can see the \textit{annotation} that we will use to decorate this interface with the source adaptee classes. The real implementation of the Annotation Processor is verbose. In the case that the reader needs it, the implementation is located here: \href{https://github.com/julatec/tribunet/blob/master/src/main/java/name/julatec/ekonomi/tribunet/annotation/AdapterProcessor.java}{\texttt{src/main/java/name/julatec/ekonomi/tribunet/annotation/AdapterProcessor.java}}. It will process all the classes with the \texttt{Adapt} annotation. It will produce a class similar to \fullref{lst:impuestotypefactoryexample1}.
+
+Finally, the goal is to implement a service class that will collect all the Adapter Services instances and provide the functionality to convert any given \texttt{XML} document on an instance of the target interface. A minimal code snippet is presented on \fullref{lst:adapterserviceexample1}.
+
+\lstinputlisting[
+float,
+floatplacement=ht,
+language=Java,
+label=lst:adaptexample1,
+caption={\texttt{Adapt} decorator}
+]{listings/AdaptExample1.java}
+
+\lstinputlisting[
+float,
+floatplacement=ht,
+language=Java,
+label=lst:impuestotypeexample1,
+caption={\texttt{ImpuestoType} target adapter interface example}
+]{listings/ImpuestoTypeExample1.java}
+
+
+\lstinputlisting[
+float,
+floatplacement=ht,
+language=Java,
+label=lst:impuestotypefactoryexample1,
+caption={\texttt{ImpuestoType} factory class}
+]{listings/ImpuestoTypeFactoryExample1.java}
+
+
+\lstinputlisting[
+float,
+floatplacement=ht,
+language=Java,
+label=lst:adapterserviceexample1,
+caption={\texttt{AdapterService} implementation}
+]{listings/AdapterServiceExample1.java}
+
+
+\section{Is the lion death?}
+
+Where the lion comes from? It comes just before the Hydra.
+
+At this point, we have implemented a code generation system that will adapt more than 600 entities to a smaller set of fewer than 20 interfaces. Additionally, we can convert any valid \texttt{XML} document into the appropriate interface. It is a good start. The compiler needs around 10 minutes to build the whole project. It is considerable since the project has more than $133.518$ lines of code. In this post we tried to simplify the process and explain the approach. If your country someday decides to implement a huge set of \texttt{XML} files, this might guide you.
+
 
 \medskip
 \bibliography{references}
