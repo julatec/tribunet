@@ -128,6 +128,7 @@ public class Clave implements Comparable<Clave> {
         return checksum;
     }
 
+    @SuppressWarnings("SpellCheckingInspection")
     public enum Situation {
         NOT_USED_0,
         NORMAL,
