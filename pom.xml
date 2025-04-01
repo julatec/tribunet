@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.3.RELEASE</version>
+            <version>5.2.21.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.google.auto.service</groupId>
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
-            <version>3.2.6</version>
+            <version>3.4.10</version>
         </dependency>
 
         <dependency>
@@ -252,6 +252,59 @@
                                     <xsd>${basedir}/src/main/resources/xsd/tribunet/v43/TiqueteElectronico_V4.3.xsd
                                     </xsd>
                                     <packagename>cr.go.hacienda.tribunet.v43.tiquete</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <!-- Version 4.4                               -->
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v44/FacturaElectronica_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.factura</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v44/FacturaElectronicaCompra_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.factura.compra</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v44/FacturaElectronicaExportacion_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.factura.exportacion</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v44/MensajeHacienda_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.mensaje.hacienda</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v44/MensajeReceptor_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.mensaje.receptor</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v44/NotaCreditoElectronica_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.nota.credito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>
+                                        ${basedir}/src/main/resources/xsd/tribunet/v44/NotaDebitoElectronica_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.nota.debito</packagename>
+                                    <extension>false</extension>
+                                </xsdOption>
+                                <xsdOption>
+                                    <xsd>${basedir}/src/main/resources/xsd/tribunet/v44/TiqueteElectronico_V4.4.xsd
+                                    </xsd>
+                                    <packagename>cr.go.hacienda.tribunet.v44.tiquete</packagename>
                                     <extension>false</extension>
                                 </xsdOption>
                             </xsdOptions>
