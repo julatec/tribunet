@@ -6,7 +6,7 @@
            targetNamespace="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronicaCompra"
            elementFormDefault="qualified" attributeFormDefault="unqualified" version="4.3" vc:minVersion="1.1">
     <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/xmldsig-core-schema.xsd"/>
+               schemaLocation="../../xmldsig-core-schema.xsd"/>
     <xs:element name="FacturaElectronicaCompra">
         <xs:annotation>
             <xs:documentation>Elemento Raiz de la Facturacion Electrónica de Compra</xs:documentation>
