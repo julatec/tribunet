@@ -42,7 +42,6 @@ public class AdapterProcessor extends AbstractProcessor {
     public synchronized void init(ProcessingEnvironment environment) {
         super.init(environment);
         this.messager = environment.getMessager();
-        System.err.println("Hello from here!");
         messager.printMessage(NOTE, "Initialize " + this.getClass().getName());
     }
 
@@ -59,7 +58,7 @@ public class AdapterProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
 
-        System.err.println("Hello from here 2!");
+
 
         boolean result = false;
 
