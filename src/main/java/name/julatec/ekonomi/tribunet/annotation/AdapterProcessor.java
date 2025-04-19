@@ -6,9 +6,11 @@ import org.springframework.stereotype.Service;
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
+import javax.lang.model.element.ExecutableElement;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.MirroredTypeException;
 import javax.lang.model.type.MirroredTypesException;
+import javax.lang.model.type.TypeMirror;
 import javax.tools.JavaFileObject;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -143,6 +145,9 @@ public class AdapterProcessor extends AbstractProcessor {
                                         final Method method = target.getMethod(getter);
                                         final String returnType = method.getReturnType().getCanonicalName();
                                         final String type = adapters.getOrDefault(returnType, returnType);
+                                        final TypeMirror sourceReturnType = ((ExecutableElement) childElement).getReturnType();
+                                        final String sourceReturnTypeName = sourceReturnType.toString();
+
                                         if (method.getReturnType().isAssignableFrom(List.class)) {
                                             final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
                                             final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName().replace('$', '.');
@@ -153,13 +158,21 @@ public class AdapterProcessor extends AbstractProcessor {
                                             if (type.equals(javax.xml.bind.JAXBElement.class.getName())) {
                                                 final ParameterizedType parameterizedType = (ParameterizedType) method.getGenericReturnType();
                                                 final String genericType = parameterizedType.getActualTypeArguments()[0].getTypeName();
-                                                writer.printf("\t\tpublic final %s %s() { return target == null ? null : target.%s().getValue(); }\n\n", genericType, getter, getter);
+                                                writer.printf("\t\tpublic final %s %s() { /*A*/ return target == null ? null : target.%s().getValue(); }\n\n", genericType, getter, getter);
+                                            } else if (type.equals("int") && sourceReturnTypeName.equals("java.math.BigInteger")) {
+                                                writer.printf("\t\tpublic final %s %s() { /*D:*/ return target == null ? null : %s.valueOf(target.%s()); }\n\n", sourceReturnTypeName, getter, sourceReturnTypeName, getter);
+                                            } else if (type.equals("java.math.BigDecimal") && sourceReturnTypeName.equals("java.math.BigInteger")) {
+                                                writer.printf("\t\tpublic final %s %s() {\n", sourceReturnTypeName, getter);
+                                                writer.printf("\t\t\tif (target == null) return null;\n");
+                                                writer.printf("\t\t\tif (target.%s() == null) return null;\n", getter);
+                                                writer.printf("\t\t\treturn target.%s().toBigInteger();\n", getter);
+                                                writer.printf("\t\t}\n\n");
                                             } else {
-                                                writer.printf("\t\tpublic final %s %s() { return target == null ? null : target.%s(); }\n\n", type, getter, getter);
+                                                writer.printf("\t\tpublic final %s %s() { /*B:%s*/ return target == null ? null : target.%s(); }\n\n", type, getter, sourceReturnType, getter);
                                             }
                                         } else {
                                             writer.printf("\t\tprivate final %s %s;\n\n", type, getter);
-                                            writer.printf("\t\tpublic final %s %s() { return %s; }\n\n", type, getter, getter);
+                                            writer.printf("\t\tpublic final %s %s() { /*C*/ return %s; }\n\n", type, getter, getter);
                                         }
                                     } catch (NoSuchMethodException e) {
 
