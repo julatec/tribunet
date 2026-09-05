@@ -2,7 +2,10 @@ package name.julatec.ekonomi.tribunet;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.math.BigDecimal;
 
@@ -57,35 +60,87 @@ class FactorIVATest {
         assertEquals(0, BigDecimal.valueOf(13.0).compareTo(F13.factor.get()));
     }
 
-    @Test
-    void valueOf_one_returnsF01() {
-        assertEquals(F01, FactorIVA.valueOf(BigDecimal.valueOf(1.0)));
+    // --- fromCodigo: camino preferido, sin ambigüedad ---
+
+    @ParameterizedTest
+    @CsvSource({
+            "01, T01",
+            "02, T02",
+            "03, T03",
+            "04, T04",
+            "05, T05",
+            "06, T06",
+            "07, T07",
+            "08, T08",
+            "09, T09",
+            "10, T10",
+            "11, T11",
+    })
+    void fromCodigo_officialCode_returnsMatchingTCode(String codigo, String expectedName) {
+        assertEquals(FactorIVA.valueOf(expectedName), FactorIVA.fromCodigo(codigo));
     }
 
     @Test
-    void valueOf_two_returnsF02() {
-        assertEquals(F02, FactorIVA.valueOf(BigDecimal.valueOf(2.0)));
+    void fromCodigo_prefersTCodeOverDeprecatedAlias() {
+        // "02".."08" también son códigos de los alias deprecados F01/F02/F04/F08 — el
+        // T-code debe ganar siempre.
+        assertEquals(T02, FactorIVA.fromCodigo("02"));
+        assertEquals(T03, FactorIVA.fromCodigo("03"));
+        assertEquals(T04, FactorIVA.fromCodigo("04"));
+        assertEquals(T07, FactorIVA.fromCodigo("07"));
+        assertEquals(T08, FactorIVA.fromCodigo("08"));
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {"99", "12", "xx"})
+    void fromCodigo_unknownOrMissing_returnsNull(String codigo) {
+        assertNull(FactorIVA.fromCodigo(codigo));
+    }
+
+    // --- valueOf(BigDecimal): fallback legado, solo para documentos sin código (v4.2) ---
+
+    @Test
+    void valueOf_zero_returnsT01_deterministically() {
+        assertEquals(T01, FactorIVA.valueOf(BigDecimal.ZERO));
+        assertEquals(T01, FactorIVA.valueOf(BigDecimal.valueOf(0.0)));
     }
 
     @Test
-    void valueOf_four_returnsF04() {
-        assertEquals(F04, FactorIVA.valueOf(BigDecimal.valueOf(4.0)));
+    void valueOf_null_treatedAsZero_returnsT01() {
+        assertEquals(T01, FactorIVA.valueOf((BigDecimal) null));
     }
 
     @Test
-    void valueOf_eight_returnsF08() {
-        assertEquals(F08, FactorIVA.valueOf(BigDecimal.valueOf(8.0)));
+    void valueOf_half_returnsT09() {
+        assertEquals(T09, FactorIVA.valueOf(BigDecimal.valueOf(0.5)));
     }
 
     @Test
-    void valueOf_thirteen_returnsF13() {
-        assertEquals(F13, FactorIVA.valueOf(BigDecimal.valueOf(13.0)));
+    void valueOf_one_returnsT02() {
+        assertEquals(T02, FactorIVA.valueOf(BigDecimal.valueOf(1.0)));
     }
 
     @Test
-    void valueOf_null_returnsOtros() {
-        // null is treated as ZERO, which maps to the last zero-factor constant (Otros)
-        assertEquals(Otros, FactorIVA.valueOf((BigDecimal) null));
+    void valueOf_two_returnsT03() {
+        assertEquals(T03, FactorIVA.valueOf(BigDecimal.valueOf(2.0)));
+    }
+
+    @Test
+    void valueOf_four_returnsT04_notT06() {
+        // 4% es ambiguo entre T04 (reducida) y T06 (transitorio); sin código, T04 es el
+        // destino elegido a propósito — T06 no existía como concepto legal antes de v4.3.
+        assertEquals(T04, FactorIVA.valueOf(BigDecimal.valueOf(4.0)));
+    }
+
+    @Test
+    void valueOf_eight_returnsT07() {
+        assertEquals(T07, FactorIVA.valueOf(BigDecimal.valueOf(8.0)));
+    }
+
+    @Test
+    void valueOf_thirteen_returnsT08() {
+        assertEquals(T08, FactorIVA.valueOf(BigDecimal.valueOf(13.0)));
     }
 
     @Test
@@ -95,21 +150,26 @@ class FactorIVATest {
     }
 
     @Test
-    void values_containsAllEightConstants() {
-        assertEquals(8, FactorIVA.values().length);
+    void values_containsAllNineteenConstants() {
+        // 3 estados (Excento/Exonerado/Otros) + 11 T-codes + 5 alias deprecados.
+        assertEquals(19, FactorIVA.values().length);
+    }
+
+    @Test
+    void placeholders_haveLowerOrdinalThanAllTCodes() {
+        // Invariante que usa DetailedDocument (factorIVA.compareTo(impuestoFactor)): una
+        // tarifa real detectada en una línea debe poder reemplazar a cualquiera de estos tres.
+        for (FactorIVA placeholder : new FactorIVA[]{Excento, Exonerado, Otros}) {
+            for (FactorIVA codigo : new FactorIVA[]{T01, T02, T03, T04, T05, T06, T07, T08, T09, T10, T11}) {
+                assertTrue(placeholder.compareTo(codigo) < 0,
+                        placeholder + " debería tener ordinal menor que " + codigo);
+            }
+        }
     }
 
     @ParameterizedTest
     @EnumSource(FactorIVA.class)
     void allConstants_haveNonNullFactor(FactorIVA factorIVA) {
         assertNotNull(factorIVA.factor);
-    }
-
-    @Test
-    void valueOf_zero_returnsAZeroFactorConstant() {
-        FactorIVA result = FactorIVA.valueOf(BigDecimal.ZERO);
-        assertNotNull(result);
-        // The zero slot is shared by Exonerado, Excento, Otros — any one is valid
-        assertTrue(result == Exonerado || result == Excento || result == Otros);
     }
 }
