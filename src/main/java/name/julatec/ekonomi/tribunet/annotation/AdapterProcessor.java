@@ -121,13 +121,21 @@ public class AdapterProcessor extends AbstractProcessor {
                                             //if (type.equals(genericType)) {
                                             //    writer.printf("\t\t\t%s = target.%s().stream();\n", getter, getter, factoryName(type), toSafeName(type));
                                             //} else {
-                                            writer.printf("\t\t\t%s = target.%s().stream().map(%s.%s::new);\n", getter, getter, factoryName(type), toSafeName(genericType));
+                                            // `target == null` acá no es defensivo de más: el constructor de un adaptador
+                                            // anidado recibe el nodo del padre, y un nodo opcional ausente llega nulo.
+                                            writer.printf("\t\t\t%s = target == null || target.%s() == null ? java.util.stream.Stream.empty() : target.%s().stream().map(%s.%s::new);\n", getter, getter, getter, factoryName(type), toSafeName(genericType));
                                             //}
                                         } else {
                                             final String returnType = method.getReturnType().getCanonicalName();
                                             final String type = adapters.getOrDefault(returnType, returnType);
                                             if (!type.equals(returnType)) {
-                                                writer.printf("\t\t\t%s = new %s.%s(target.%s());\n", getter, factoryName(type), toSafeName(returnType), getter);
+                                                // La nulidad se empuja HACIA ADENTRO y no hacia afuera: el adaptador anidado
+                                                // se construye igual, envolviendo un nulo. Así `getX()` nunca devuelve null y
+                                                // quien encadena `getReceptor().getIdentificacion().getNumero()` obtiene null
+                                                // en el último paso, que es lo que ya hace todo getter escalar generado acá.
+                                                // Devolver null en `getX()` habría movido el NullPointerException un nivel
+                                                // más arriba, a código que hoy funciona.
+                                                writer.printf("\t\t\t%s = new %s.%s(target == null ? null : target.%s());\n", getter, factoryName(type), toSafeName(returnType), getter);
                                             }
                                         }
                                     } catch (NoSuchMethodException e) {
