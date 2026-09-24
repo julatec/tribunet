@@ -6,7 +6,7 @@
 
     <groupId>name.julatec.ekonomi</groupId>
     <artifactId>tribunet</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <url>https://github.com/julatec/tribunet</url>
 
     <properties>
@@ -42,10 +42,14 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <!-- GHSA-j288-q9x7-2f5v / CVE-2025-48924: recursión sin control en entradas
+             largas, corregido en 3.18.0. No propagaba a ekonomi (el BOM de Spring Boot
+             4.1.1 ya gana con 3.20.0), pero el build de este repo por sí solo sí quedaba
+             vulnerable. Se sube a la misma 3.20.0 para que las dos coincidan. -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.17.0</version>
+            <version>3.20.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
@@ -69,10 +73,13 @@
 <!--            <version>4.0.5</version>-->
 <!--        </dependency>-->
 
+        <!-- GHSA-ghvc-7hp8-2g2v / CVE-2026-50645: sin restricción en encabezados de
+             adjunto por mensaje, corregido en 4.1.7. Este SÍ propagaba: scope compile,
+             sin override en ekonomi, así que quedaba en WEB-INF/lib del WAR desplegado. -->
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
-            <version>4.1.1</version>
+            <version>4.1.8</version>
         </dependency>
 
         <dependency>
