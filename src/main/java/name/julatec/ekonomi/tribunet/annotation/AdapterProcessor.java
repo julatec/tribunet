@@ -100,6 +100,13 @@ public class AdapterProcessor extends AbstractProcessor {
                         writer.printf("import %s;\n", dependency.getName());
                     }
                     writer.println();
+                    // Código generado: los casts de abajo son seguros por construcción —el
+                    // procesador sabe el tipo de cada target— pero javac no tiene cómo verlo, y
+                    // con -Xlint:all esto solo produce 97 avisos que nadie puede arreglar
+                    // editando el archivo, porque el archivo se vuelve a generar en cada build.
+                    // Se suprime en el emisor, que es el único lugar donde la supresión es
+                    // una afirmación y no una excusa.
+                    writer.println("@SuppressWarnings({\"unchecked\", \"rawtypes\"})");
                     writer.printf("@%s(\"%s\")\n", Service.class.getName(), simpleName(factoryName));
                     writer.printf("public final class %s implements %s {\n", simpleName(factoryName), AdapterFactory.class.getName());
                     for (Class<?> target : loadClass(adapt).collect(Collectors.toList())) {
