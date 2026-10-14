@@ -119,6 +119,20 @@
                 <configuration>
                     <release>21</release>  <!--or <release>10</release>-->
                 </configuration>
+                <executions>
+                    <!-- Las interfaces @Adapt de las pruebas generan sus *Factory con el procesador de
+                         src/main. Sin registrarlo aquí, una compilación limpia no las genera y FactoryTest
+                         no compila; solo andaba con clases viejas en target/. El procesador ya está en
+                         target/classes cuando corre testCompile. -->
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <annotationProcessors>
+                                <annotationProcessor>name.julatec.ekonomi.tribunet.annotation.AdapterProcessor</annotationProcessor>
+                            </annotationProcessors>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
